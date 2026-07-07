@@ -1,7 +1,14 @@
 import { Link } from "@tanstack/react-router";
-import { Menu, ArrowRight } from "lucide-react";
+import { Menu, ArrowRight, Facebook, Instagram, Linkedin, MessageCircle } from "lucide-react";
 import { useState } from "react";
 import { divisions } from "@/lib/divisions";
+
+export const socialLinks = [
+  { label: "Instagram", href: "https://www.instagram.com/megasult.franciscobeltrao/", icon: Instagram },
+  { label: "Facebook", href: "https://www.facebook.com/megasult.franciscobeltrao/", icon: Facebook },
+  { label: "LinkedIn", href: "https://www.linkedin.com/company/megasult-megasult/", icon: Linkedin },
+  { label: "WhatsApp", href: "https://wa.me/554632112800", icon: MessageCircle },
+] as const;
 
 export function Logo() {
   return (
