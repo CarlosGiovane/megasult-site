@@ -50,13 +50,17 @@ function Home() {
               const Icon = d.icon;
               const isAccent = i % 2 === 1;
               return (
-                <Link
+                <div
                   key={d.slug}
-                  to={d.path}
                   className="group relative flex flex-col overflow-hidden rounded-3xl border border-white/15 bg-white/10 p-7 text-left backdrop-blur-xl transition-all hover:-translate-y-1 hover:border-accent/60 hover:bg-white/15"
                 >
+                  <Link
+                    to={d.path}
+                    className="absolute inset-0 z-0"
+                    aria-label={`Acessar divisão ${d.title}`}
+                  />
                   <div
-                    className={`inline-flex h-14 w-14 items-center justify-center rounded-2xl ${
+                    className={`relative z-10 inline-flex h-14 w-14 items-center justify-center rounded-2xl ${
                       isAccent
                         ? "bg-gradient-accent text-accent-foreground"
                         : "bg-white text-primary"
@@ -64,13 +68,26 @@ function Home() {
                   >
                     <Icon className="h-7 w-7" />
                   </div>
-                  <h2 className="mt-6 font-display text-2xl font-bold text-white">{d.title}</h2>
-                  <p className="mt-3 flex-1 text-sm leading-relaxed text-white/75">{d.short}</p>
-                  <span className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-accent">
-                    Acessar divisão
-                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                  </span>
-                </Link>
+                  <h2 className="relative z-10 mt-6 font-display text-2xl font-bold text-white">{d.title}</h2>
+                  <p className="relative z-10 mt-3 flex-1 text-sm leading-relaxed text-white/75">{d.short}</p>
+                  <div className="relative z-10 mt-6 flex flex-col gap-2">
+                    <Link
+                      to={d.path}
+                      hash="servicos"
+                      className="inline-flex items-center justify-center gap-1.5 rounded-full bg-gradient-accent px-4 py-2.5 text-sm font-semibold text-accent-foreground shadow-accent transition-transform hover:-translate-y-0.5"
+                    >
+                      Ver serviços
+                      <ArrowRight className="h-4 w-4" />
+                    </Link>
+                    <Link
+                      to={d.path}
+                      hash="contato"
+                      className="inline-flex items-center justify-center gap-1.5 rounded-full border border-white/25 bg-white/5 px-4 py-2.5 text-sm font-semibold text-white backdrop-blur-md transition-colors hover:bg-white/15"
+                    >
+                      Falar com a divisão
+                    </Link>
+                  </div>
+                </div>
               );
             })}
           </div>
