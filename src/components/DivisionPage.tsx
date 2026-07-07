@@ -1,12 +1,15 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowLeft, ArrowRight, Check, Phone, Mail } from "lucide-react";
 import { SiteHeader, SiteFooter } from "@/components/SiteHeader";
-import { divisions, type Division } from "@/lib/divisions";
+import { divisions, type Division, type ServiceItem } from "@/lib/divisions";
 
 export function DivisionPage({ division }: { division: Division }) {
   const others = divisions.filter((d) => d.slug !== division.slug);
   const Icon = division.icon;
-  const heroBg = division.accent === "accent" ? "bg-gradient-accent text-accent-foreground" : "bg-hero text-primary-foreground";
+  const heroBg =
+    division.accent === "accent"
+      ? "bg-gradient-accent text-accent-foreground"
+      : "bg-hero text-primary-foreground";
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -30,7 +33,7 @@ export function DivisionPage({ division }: { division: Division }) {
               <p className="mt-3 max-w-2xl text-lg opacity-90">{division.tagline}</p>
             </div>
           </div>
-          <div className="mt-10 max-w-2xl text-base opacity-90 sm:text-lg">{division.intro}</div>
+          <div className="mt-10 max-w-3xl text-base opacity-90 sm:text-lg">{division.intro}</div>
           <div className="mt-8 flex flex-wrap gap-4">
             <a
               href="#contato"
@@ -59,25 +62,81 @@ export function DivisionPage({ division }: { division: Division }) {
         </div>
       </section>
 
-      <section id="servicos" className="bg-surface">
-        <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
-          <span className="text-sm font-semibold uppercase tracking-widest text-primary-glow">O que fazemos</span>
+      {/* SERVICES */}
+      {(division.services || division.serviceGroups) && (
+        <section id="servicos" className="bg-surface">
+          <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+            <span className="text-sm font-semibold uppercase tracking-widest text-primary-glow">
+              O que fazemos
+            </span>
+            <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+              Serviços da divisão {division.title}
+            </h2>
+
+            {division.services && (
+              <div className="mt-10 grid gap-5 md:grid-cols-2">
+                {division.services.map((s) => (
+                  <ServiceCard key={s.title} item={s} />
+                ))}
+              </div>
+            )}
+
+            {division.serviceGroups && (
+              <div className="mt-12 space-y-14">
+                {division.serviceGroups.map((g) => (
+                  <div key={g.title}>
+                    <h3 className="font-display text-2xl font-bold text-foreground">{g.title}</h3>
+                    <div className="mt-6 grid gap-5 md:grid-cols-2">
+                      {g.items.map((s) => (
+                        <ServiceCard key={s.title} item={s} />
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        </section>
+      )}
+
+      {/* SEGMENTS (Sistemas) */}
+      {division.segments && (
+        <section id="segmentos" className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+          <span className="text-sm font-semibold uppercase tracking-widest text-primary-glow">
+            Segmentos atendidos
+          </span>
           <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            Serviços da divisão {division.title}
+            Soluções especializadas por segmento
           </h2>
-          <div className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            {division.services.map((s) => (
-              <div key={s} className="flex items-start gap-3 rounded-2xl border border-border bg-card p-5">
-                <div className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gradient-accent text-accent-foreground">
-                  <Check className="h-3.5 w-3.5" />
+          <div className="mt-12 space-y-16">
+            {division.segments.map((group) => (
+              <div key={group.label}>
+                <h3 className="font-display text-2xl font-bold text-foreground">{group.label}</h3>
+                <div className="mt-6 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+                  {group.items.map((seg) => (
+                    <div key={seg.title} className="rounded-3xl border border-border bg-card p-6 shadow-elegant">
+                      <div className="font-display text-lg font-bold text-foreground">{seg.title}</div>
+                      {seg.intro && (
+                        <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{seg.intro}</p>
+                      )}
+                      <ul className="mt-4 space-y-2">
+                        {seg.bullets.map((b) => (
+                          <li key={b} className="flex items-start gap-2 text-sm text-foreground/90">
+                            <Check className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
+                            <span>{b}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
                 </div>
-                <span className="text-sm font-medium text-foreground">{s}</span>
               </div>
             ))}
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
+      {/* CONTATO */}
       <section id="contato" className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
         <div className="relative overflow-hidden rounded-[2rem] bg-hero p-10 text-primary-foreground shadow-glow sm:p-14">
           <div className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-accent/40 blur-3xl" />
@@ -132,6 +191,24 @@ export function DivisionPage({ division }: { division: Division }) {
       </section>
 
       <SiteFooter />
+    </div>
+  );
+}
+
+function ServiceCard({ item }: { item: ServiceItem }) {
+  return (
+    <div className="rounded-2xl border border-border bg-card p-6 shadow-elegant transition-transform hover:-translate-y-0.5">
+      <div className="flex items-start gap-3">
+        <div className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-gradient-accent text-accent-foreground">
+          <Check className="h-4 w-4" />
+        </div>
+        <div>
+          <div className="font-display text-base font-bold text-foreground">{item.title}</div>
+          {item.desc && (
+            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{item.desc}</p>
+          )}
+        </div>
+      </div>
     </div>
   );
 }
