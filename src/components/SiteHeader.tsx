@@ -87,22 +87,54 @@ export function SiteHeader() {
 export function SiteFooter() {
   return (
     <footer className="border-t border-border bg-surface">
-      <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
-        <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
-          <div className="flex items-center gap-2">
-            <Logo />
-            <span className="font-display text-lg font-bold text-primary">MEGASULT</span>
+      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <div className="grid gap-8 md:grid-cols-3 md:items-start">
+          <div>
+            <div className="flex items-center gap-2">
+              <Logo />
+              <span className="font-display text-lg font-bold text-primary">MEGASULT</span>
+            </div>
+            <p className="mt-3 max-w-xs text-sm text-muted-foreground">
+              Contabilidade, Consultoria, Sistemas e Marcas & Patentes para impulsionar o seu negócio.
+            </p>
           </div>
-          <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-muted-foreground">
-            {divisions.map((d) => (
-              <Link key={d.slug} to={d.path} className="hover:text-primary">
-                {d.title}
-              </Link>
-            ))}
+
+          <div className="md:justify-self-center">
+            <div className="text-xs font-semibold uppercase tracking-widest text-foreground">Divisões</div>
+            <div className="mt-3 flex flex-col gap-2 text-sm text-muted-foreground">
+              {divisions.map((d) => (
+                <Link key={d.slug} to={d.path} className="hover:text-primary">
+                  {d.title}
+                </Link>
+              ))}
+            </div>
           </div>
-          <span className="text-xs text-muted-foreground">
-            © {new Date().getFullYear()} Megasult
-          </span>
+
+          <div className="md:justify-self-end">
+            <div className="text-xs font-semibold uppercase tracking-widest text-foreground">Redes sociais</div>
+            <div className="mt-3 flex flex-wrap gap-3">
+              {socialLinks.map((s) => {
+                const Icon = s.icon;
+                return (
+                  <a
+                    key={s.label}
+                    href={s.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={s.label}
+                    className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border bg-background text-muted-foreground transition-colors hover:border-primary hover:bg-primary hover:text-primary-foreground"
+                  >
+                    <Icon className="h-5 w-5" />
+                  </a>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-10 flex flex-col items-start justify-between gap-2 border-t border-border pt-6 text-xs text-muted-foreground sm:flex-row sm:items-center">
+          <span>© {new Date().getFullYear()} Megasult. Todos os direitos reservados.</span>
+          <span>Francisco Beltrão · PR</span>
         </div>
       </div>
     </footer>
