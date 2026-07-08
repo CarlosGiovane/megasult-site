@@ -84,35 +84,77 @@ export function SiteHeader() {
   );
 }
 
+type Office = {
+  city: string;
+  state: string;
+  address: string[];
+  email: string;
+  phone: string;
+  note?: string;
+};
+
+const offices: Office[] = [
+  {
+    city: "Francisco Beltrão",
+    state: "PR",
+    address: ["Rua Octaviano T. dos Santos, 1373", "Edif. Vienna - Centro", "CEP 85601-030"],
+    email: "contato@megasult.com.br",
+    phone: "(46) 3211-2800",
+  },
+  {
+    city: "Maringá",
+    state: "PR",
+    address: ["Av. Humaitá, 542 - SL 21", "Edif. Itaipoá - Zona 04", "CEP 87014-200"],
+    email: "contato201@megasult.com.br",
+    phone: "(44) 3225-0869",
+    note: "Contabilidade e Consultoria",
+  },
+  {
+    city: "Maringá",
+    state: "PR",
+    address: ["Av. João P. Vieira Filho, 672", "SL 508 - Edif. New Center", "Zona 01 - CEP 87020-015"],
+    email: "comercial.201@megasult.com.br",
+    phone: "(44) 3225-0311",
+    note: "Sistemas",
+  },
+  {
+    city: "Curitiba",
+    state: "PR",
+    address: ["Av. Sete de Setembro, 4476", "SL 504 - Batel", "Edif. Business Tower - CEP 80250-085"],
+    email: "comercial.301@megasult.com.br",
+    phone: "(41) 3018-5808",
+  },
+  {
+    city: "Londrina",
+    state: "PR",
+    address: ["Rua João Pessoa, 90", "SL 06 - Jardim Agari", "CEP 86020-220"],
+    email: "comercial.401@megasult.com.br",
+    phone: "(43) 3027-1918",
+  },
+  {
+    city: "Marmeleiro",
+    state: "PR",
+    address: ["Rua Telmo Octavio Muller, 293", "Centro", "CEP 85615-000"],
+    email: "contato@megasut.com.br",
+    phone: "(46) 3525-1211",
+  },
+];
+
 export function SiteFooter() {
   return (
     <footer className="border-t border-border bg-surface">
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-        <div className="grid gap-8 md:grid-cols-3 md:items-start">
-          <div>
+        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+          {/* Brand */}
+          <div className="lg:col-span-1">
             <div className="flex items-center gap-2">
               <Logo />
               <span className="font-display text-lg font-bold text-primary">MEGASULT</span>
             </div>
-            <p className="mt-3 max-w-xs text-sm text-muted-foreground">
+            <p className="mt-3 max-w-xs text-sm text-muted-foreground leading-relaxed">
               Contabilidade, Consultoria, Sistemas e Marcas & Patentes para impulsionar o seu negócio.
             </p>
-          </div>
-
-          <div className="md:justify-self-center">
-            <div className="text-xs font-semibold uppercase tracking-widest text-foreground">Divisões</div>
-            <div className="mt-3 flex flex-col gap-2 text-sm text-muted-foreground">
-              {divisions.map((d) => (
-                <Link key={d.slug} to={d.path} className="hover:text-primary">
-                  {d.title}
-                </Link>
-              ))}
-            </div>
-          </div>
-
-          <div className="md:justify-self-end">
-            <div className="text-xs font-semibold uppercase tracking-widest text-foreground">Redes sociais</div>
-            <div className="mt-3 flex flex-wrap gap-3">
+            <div className="mt-6 flex flex-wrap gap-3">
               {socialLinks.map((s) => {
                 const Icon = s.icon;
                 return (
@@ -130,9 +172,49 @@ export function SiteFooter() {
               })}
             </div>
           </div>
+
+          {/* Divisions */}
+          <div>
+            <div className="text-xs font-semibold uppercase tracking-widest text-foreground">Divisões</div>
+            <div className="mt-3 flex flex-col gap-2 text-sm text-muted-foreground">
+              {divisions.map((d) => (
+                <Link key={d.slug} to={d.path} className="hover:text-primary transition-colors">
+                  {d.title}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Offices */}
+          <div className="md:col-span-2 lg:col-span-2">
+            <div className="text-xs font-semibold uppercase tracking-widest text-foreground">Unidades</div>
+            <div className="mt-4 grid gap-x-8 gap-y-6 sm:grid-cols-2">
+              {offices.map((o) => (
+                <div key={`${o.city}-${o.note || "main"}`} className="text-sm">
+                  <div className="font-semibold text-foreground">
+                    {o.city} – {o.state}
+                    {o.note && <span className="ml-1 font-normal text-muted-foreground">({o.note})</span>}
+                  </div>
+                  <div className="mt-1 space-y-0.5 text-muted-foreground">
+                    {o.address.map((line) => (
+                      <div key={line}>{line}</div>
+                    ))}
+                  </div>
+                  <div className="mt-1.5 flex flex-wrap gap-x-4 gap-y-1 text-muted-foreground">
+                    <a href={`mailto:${o.email}`} className="hover:text-primary transition-colors">
+                      {o.email}
+                    </a>
+                    <a href={`tel:${o.phone.replace(/\D/g, "")}`} className="hover:text-primary transition-colors">
+                      {o.phone}
+                    </a>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
 
-        <div className="mt-10 flex flex-col items-start justify-between gap-2 border-t border-border pt-6 text-xs text-muted-foreground sm:flex-row sm:items-center">
+        <div className="mt-12 flex flex-col items-start justify-between gap-2 border-t border-border pt-6 text-xs text-muted-foreground sm:flex-row sm:items-center">
           <span>© {new Date().getFullYear()} Megasult. Todos os direitos reservados.</span>
           <span>Francisco Beltrão · PR</span>
         </div>
