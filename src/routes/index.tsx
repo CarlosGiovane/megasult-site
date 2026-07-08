@@ -22,59 +22,90 @@ function Home() {
     <div className="min-h-screen bg-background text-foreground">
       <SiteHeader />
 
-      {/* HERO — divisions chooser */}
+      {/* HERO */}
       <section className="relative overflow-hidden bg-hero text-primary-foreground">
         <div className="pointer-events-none absolute inset-0 opacity-40 [background-image:radial-gradient(circle_at_1px_1px,white_1px,transparent_0)] [background-size:32px_32px]" />
         <div className="pointer-events-none absolute -left-24 top-1/3 h-72 w-72 rounded-full bg-accent/30 blur-3xl" />
         <div className="pointer-events-none absolute -right-16 bottom-0 h-80 w-80 rounded-full bg-primary-glow/50 blur-3xl" />
 
-        <div className="relative mx-auto max-w-7xl px-4 pb-20 pt-16 sm:px-6 lg:px-8 lg:pb-28 lg:pt-24">
+        <div className="relative mx-auto max-w-7xl px-4 pb-16 pt-16 sm:px-6 lg:px-8 lg:pb-24 lg:pt-24">
           <div className="mx-auto max-w-3xl text-center">
             <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-medium backdrop-blur-md">
               <Sparkles className="h-3.5 w-3.5 text-accent" />
-              Escolha por onde a Megasult vai apoiar seu negócio
+              Desde 1996 otimizando negócios pelo Brasil
             </div>
             <h1 className="mt-6 font-display text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
-              Qual divisão você quer
-              <span className="text-gradient-accent"> acessar hoje</span>?
+              A Megasult tem a
+              <span className="text-gradient-accent"> divisão certa</span> para o seu negócio
             </h1>
             <p className="mt-5 text-lg text-white/75">
-              Selecione uma das quatro divisões Megasult e veja soluções, serviços e o contato do
-              time responsável por ela.
+              Quatro áreas de atuação com times especializados: contabilidade, consultoria,
+              sistemas e marcas & patentes. Escolha a que faz sentido para sua empresa.
+            </p>
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+              <a
+                href="#divisoes"
+                className="inline-flex items-center gap-2 rounded-full bg-gradient-accent px-6 py-3 text-sm font-semibold text-accent-foreground shadow-accent transition-transform hover:-translate-y-0.5"
+              >
+                Conhecer as divisões
+                <ArrowRight className="h-4 w-4" />
+              </a>
+              <a
+                href="#sobre"
+                className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/5 px-6 py-3 text-sm font-semibold text-white backdrop-blur-md transition-colors hover:bg-white/15"
+              >
+                Sobre a Megasult
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* DIVISION CARDS — logo no início */}
+      <section id="divisoes" className="relative bg-background py-16 sm:py-20 lg:py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-12 text-center lg:mb-16">
+            <span className="text-sm font-semibold uppercase tracking-widest text-primary">
+              Nossas Divisões
+            </span>
+            <h2 className="mx-auto mt-3 max-w-2xl font-display text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
+              Especialistas em áreas distintas, unidos pelo mesmo propósito
+            </h2>
+            <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
+              Cada divisão atua com autonomia e expertise, oferecendo soluções completas para cada
+              necessidade do seu negócio.
             </p>
           </div>
 
-          {/* DIVISION CARDS */}
-          <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {divisions.map((d, i) => {
               const Icon = d.icon;
               const isAccent = i % 2 === 1;
               return (
                 <div
                   key={d.slug}
-                  className="group relative flex flex-col overflow-hidden rounded-3xl border border-white/15 bg-white/10 p-7 text-left backdrop-blur-xl transition-all hover:-translate-y-1 hover:border-accent/60 hover:bg-white/15"
+                  className="group relative flex flex-col overflow-hidden rounded-3xl border border-border bg-card p-7 text-left shadow-elegant transition-all hover:-translate-y-1 hover:border-primary/30 hover:shadow-glow"
                 >
-                  <Link
-                    to={d.path}
-                    className="absolute inset-0 z-0"
-                    aria-label={`Acessar divisão ${d.title}`}
-                  />
                   <div
-                    className={`relative z-10 inline-flex h-14 w-14 items-center justify-center rounded-2xl ${
+                    className={`inline-flex h-14 w-14 items-center justify-center rounded-2xl ${
                       isAccent
                         ? "bg-gradient-accent text-accent-foreground"
-                        : "bg-white text-primary"
+                        : "bg-gradient-primary text-primary-foreground"
                     }`}
                   >
                     <Icon className="h-7 w-7" />
                   </div>
-                  <h2 className="relative z-10 mt-6 font-display text-2xl font-bold text-white">{d.title}</h2>
-                  <p className="relative z-10 mt-3 flex-1 text-sm leading-relaxed text-white/75">{d.short}</p>
-                  <div className="relative z-10 mt-6 flex flex-col gap-2">
+                  <h3 className="mt-6 font-display text-xl font-bold text-foreground">{d.title}</h3>
+                  <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">{d.short}</p>
+                  <div className="mt-6 flex flex-col gap-2">
                     <Link
                       to={d.path}
                       hash="servicos"
-                      className="inline-flex items-center justify-center gap-1.5 rounded-full bg-gradient-accent px-4 py-2.5 text-sm font-semibold text-accent-foreground shadow-accent transition-transform hover:-translate-y-0.5"
+                      className={`inline-flex items-center justify-center gap-1.5 rounded-full px-4 py-2.5 text-sm font-semibold transition-transform hover:-translate-y-0.5 ${
+                        isAccent
+                          ? "bg-gradient-accent text-accent-foreground shadow-accent"
+                          : "bg-gradient-primary text-primary-foreground shadow-glow"
+                      }`}
                     >
                       Ver serviços
                       <ArrowRight className="h-4 w-4" />
@@ -82,22 +113,20 @@ function Home() {
                     <Link
                       to={d.path}
                       hash="contato"
-                      className="inline-flex items-center justify-center gap-1.5 rounded-full border border-white/25 bg-white/5 px-4 py-2.5 text-sm font-semibold text-white backdrop-blur-md transition-colors hover:bg-white/15"
+                      className="inline-flex items-center justify-center gap-1.5 rounded-full border border-border bg-muted/60 px-4 py-2.5 text-sm font-semibold text-foreground transition-colors hover:bg-muted"
                     >
                       Falar com a divisão
                     </Link>
                   </div>
+                  <Link
+                    to={d.path}
+                    className="absolute inset-0 z-0"
+                    aria-label={`Acessar divisão ${d.title}`}
+                  />
                 </div>
               );
             })}
           </div>
-
-          <p className="mt-10 text-center text-sm text-white/60">
-            Não sabe por onde começar?{" "}
-            <a href="#sobre" className="font-semibold text-accent hover:underline">
-              Conheça a Megasult
-            </a>
-          </p>
         </div>
       </section>
 
