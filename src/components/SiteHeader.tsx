@@ -90,6 +90,7 @@ type Office = {
   address: string[];
   email: string;
   phone: string;
+  whatsapp: string;
   note?: string;
 };
 
@@ -100,6 +101,7 @@ const offices: Office[] = [
     address: ["Rua Octaviano T. dos Santos, 1373", "Edif. Vienna - Centro", "CEP 85601-030"],
     email: "contato@megasult.com.br",
     phone: "(46) 3211-2800",
+    whatsapp: "554632112800",
   },
   {
     city: "Maringá",
@@ -107,6 +109,7 @@ const offices: Office[] = [
     address: ["Av. Humaitá, 542 - SL 21", "Edif. Itaipoá - Zona 04", "CEP 87014-200"],
     email: "contato201@megasult.com.br",
     phone: "(44) 3225-0869",
+    whatsapp: "554432250869",
     note: "Contabilidade e Consultoria",
   },
   {
@@ -115,6 +118,7 @@ const offices: Office[] = [
     address: ["Av. João P. Vieira Filho, 672", "SL 508 - Edif. New Center", "Zona 01 - CEP 87020-015"],
     email: "comercial.201@megasult.com.br",
     phone: "(44) 3225-0311",
+    whatsapp: "554432250311",
     note: "Sistemas",
   },
   {
@@ -123,6 +127,7 @@ const offices: Office[] = [
     address: ["Av. Sete de Setembro, 4476", "SL 504 - Batel", "Edif. Business Tower - CEP 80250-085"],
     email: "comercial.301@megasult.com.br",
     phone: "(41) 3018-5808",
+    whatsapp: "554130185808",
   },
   {
     city: "Londrina",
@@ -130,6 +135,7 @@ const offices: Office[] = [
     address: ["Rua João Pessoa, 90", "SL 06 - Jardim Agari", "CEP 86020-220"],
     email: "comercial.401@megasult.com.br",
     phone: "(43) 3027-1918",
+    whatsapp: "554330271918",
   },
   {
     city: "Marmeleiro",
@@ -137,6 +143,7 @@ const offices: Office[] = [
     address: ["Rua Telmo Octavio Muller, 293", "Centro", "CEP 85615-000"],
     email: "contato@megasut.com.br",
     phone: "(46) 3525-1211",
+    whatsapp: "554635251211",
   },
 ];
 
