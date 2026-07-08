@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Menu, ArrowRight, Facebook, Instagram, Linkedin, MessageCircle } from "lucide-react";
+import { Menu, ArrowRight, Facebook, Instagram, Linkedin, MessageCircle, Phone } from "lucide-react";
 import { useState } from "react";
 import { divisions } from "@/lib/divisions";
 
@@ -90,6 +90,7 @@ type Office = {
   address: string[];
   email: string;
   phone: string;
+  whatsapp: string;
   note?: string;
 };
 
@@ -100,6 +101,7 @@ const offices: Office[] = [
     address: ["Rua Octaviano T. dos Santos, 1373", "Edif. Vienna - Centro", "CEP 85601-030"],
     email: "contato@megasult.com.br",
     phone: "(46) 3211-2800",
+    whatsapp: "554632112800",
   },
   {
     city: "Maringá",
@@ -107,6 +109,7 @@ const offices: Office[] = [
     address: ["Av. Humaitá, 542 - SL 21", "Edif. Itaipoá - Zona 04", "CEP 87014-200"],
     email: "contato201@megasult.com.br",
     phone: "(44) 3225-0869",
+    whatsapp: "554432250869",
     note: "Contabilidade e Consultoria",
   },
   {
@@ -115,6 +118,7 @@ const offices: Office[] = [
     address: ["Av. João P. Vieira Filho, 672", "SL 508 - Edif. New Center", "Zona 01 - CEP 87020-015"],
     email: "comercial.201@megasult.com.br",
     phone: "(44) 3225-0311",
+    whatsapp: "554432250311",
     note: "Sistemas",
   },
   {
@@ -123,6 +127,7 @@ const offices: Office[] = [
     address: ["Av. Sete de Setembro, 4476", "SL 504 - Batel", "Edif. Business Tower - CEP 80250-085"],
     email: "comercial.301@megasult.com.br",
     phone: "(41) 3018-5808",
+    whatsapp: "554130185808",
   },
   {
     city: "Londrina",
@@ -130,6 +135,7 @@ const offices: Office[] = [
     address: ["Rua João Pessoa, 90", "SL 06 - Jardim Agari", "CEP 86020-220"],
     email: "comercial.401@megasult.com.br",
     phone: "(43) 3027-1918",
+    whatsapp: "554330271918",
   },
   {
     city: "Marmeleiro",
@@ -137,6 +143,7 @@ const offices: Office[] = [
     address: ["Rua Telmo Octavio Muller, 293", "Centro", "CEP 85615-000"],
     email: "contato@megasut.com.br",
     phone: "(46) 3525-1211",
+    whatsapp: "554635251211",
   },
 ];
 
@@ -188,24 +195,34 @@ export function SiteFooter() {
           {/* Offices */}
           <div className="md:col-span-2 lg:col-span-2">
             <div className="text-xs font-semibold uppercase tracking-widest text-foreground">Unidades</div>
-            <div className="mt-4 grid gap-x-8 gap-y-6 sm:grid-cols-2">
+            <div className="mt-4 grid gap-x-6 gap-y-4 sm:grid-cols-2">
               {offices.map((o) => (
-                <div key={`${o.city}-${o.note || "main"}`} className="text-sm">
+                <div key={`${o.city}-${o.note || "main"}`} className="text-xs">
                   <div className="font-semibold text-foreground">
                     {o.city} – {o.state}
                     {o.note && <span className="ml-1 font-normal text-muted-foreground">({o.note})</span>}
                   </div>
-                  <div className="mt-1 space-y-0.5 text-muted-foreground">
+                  <div className="mt-0.5 space-y-0 leading-tight text-muted-foreground">
                     {o.address.map((line) => (
                       <div key={line}>{line}</div>
                     ))}
                   </div>
-                  <div className="mt-1.5 flex flex-wrap gap-x-4 gap-y-1 text-muted-foreground">
+                  <div className="mt-1 flex flex-wrap items-center gap-x-3 gap-y-0.5 text-muted-foreground">
                     <a href={`mailto:${o.email}`} className="hover:text-primary transition-colors">
                       {o.email}
                     </a>
                     <a href={`tel:${o.phone.replace(/\D/g, "")}`} className="hover:text-primary transition-colors">
                       {o.phone}
+                    </a>
+                    <a
+                      href={`https://wa.me/${o.whatsapp}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 hover:text-primary transition-colors"
+                      aria-label={`WhatsApp ${o.city}`}
+                    >
+                      <Phone className="h-3 w-3" />
+                      WhatsApp
                     </a>
                   </div>
                 </div>
