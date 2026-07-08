@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Menu, ArrowRight, Facebook, Instagram, Linkedin, MessageCircle } from "lucide-react";
+import { Menu, ArrowRight, Facebook, Instagram, Linkedin, MessageCircle, Phone } from "lucide-react";
 import { useState } from "react";
 import { divisions } from "@/lib/divisions";
 
