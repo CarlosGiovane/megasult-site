@@ -195,24 +195,34 @@ export function SiteFooter() {
           {/* Offices */}
           <div className="md:col-span-2 lg:col-span-2">
             <div className="text-xs font-semibold uppercase tracking-widest text-foreground">Unidades</div>
-            <div className="mt-4 grid gap-x-8 gap-y-6 sm:grid-cols-2">
+            <div className="mt-4 grid gap-x-6 gap-y-4 sm:grid-cols-2">
               {offices.map((o) => (
-                <div key={`${o.city}-${o.note || "main"}`} className="text-sm">
+                <div key={`${o.city}-${o.note || "main"}`} className="text-xs">
                   <div className="font-semibold text-foreground">
                     {o.city} – {o.state}
                     {o.note && <span className="ml-1 font-normal text-muted-foreground">({o.note})</span>}
                   </div>
-                  <div className="mt-1 space-y-0.5 text-muted-foreground">
+                  <div className="mt-0.5 space-y-0 leading-tight text-muted-foreground">
                     {o.address.map((line) => (
                       <div key={line}>{line}</div>
                     ))}
                   </div>
-                  <div className="mt-1.5 flex flex-wrap gap-x-4 gap-y-1 text-muted-foreground">
+                  <div className="mt-1 flex flex-wrap items-center gap-x-3 gap-y-0.5 text-muted-foreground">
                     <a href={`mailto:${o.email}`} className="hover:text-primary transition-colors">
                       {o.email}
                     </a>
                     <a href={`tel:${o.phone.replace(/\D/g, "")}`} className="hover:text-primary transition-colors">
                       {o.phone}
+                    </a>
+                    <a
+                      href={`https://wa.me/${o.whatsapp}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 hover:text-primary transition-colors"
+                      aria-label={`WhatsApp ${o.city}`}
+                    >
+                      <Phone className="h-3 w-3" />
+                      WhatsApp
                     </a>
                   </div>
                 </div>
