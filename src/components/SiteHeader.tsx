@@ -12,10 +12,11 @@ export const socialLinks = [
 
 export function Logo() {
   return (
-    <svg width="36" height="36" viewBox="0 0 40 40" fill="none" aria-hidden>
-      <path d="M6 32 L18 10 L24 22 L28 16 L34 32 Z" fill="var(--primary)" />
-      <path d="M20 32 L28 16 L34 32 Z" fill="var(--accent)" />
-    </svg>
+    <img
+      src={`${import.meta.env.BASE_URL}logo-megasult.png`}
+      alt="Megasult"
+      className="h-9 w-auto"
+    />
   );
 }
 
@@ -26,7 +27,6 @@ export function SiteHeader() {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link to="/" className="flex items-center gap-2">
           <Logo />
-          <span className="font-display text-lg font-bold tracking-tight text-primary">MEGASULT</span>
         </Link>
         <nav className="hidden items-center gap-7 md:flex">
           {divisions.map((d) => (
@@ -156,7 +156,6 @@ export function SiteFooter() {
           <div className="lg:col-span-1">
             <div className="flex items-center gap-2">
               <Logo />
-              <span className="font-display text-lg font-bold text-primary">MEGASULT</span>
             </div>
             <p className="mt-3 max-w-xs text-sm text-muted-foreground leading-relaxed">
               Contabilidade, Consultoria, Sistemas e Marcas & Patentes para impulsionar o seu negócio.
