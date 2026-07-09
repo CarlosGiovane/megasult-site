@@ -6,10 +6,19 @@
 // You can pass additional config via defineConfig({ vite: { ... }, etc... }) if needed.
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
+// Set DEPLOY_TARGET=github-pages (see .github/workflows/deploy-gh-pages.yml) to build a fully
+// static, base-path-prefixed export for GitHub Pages instead of the default Cloudflare SSR build.
+const isGithubPagesBuild = process.env.DEPLOY_TARGET === "github-pages";
+const githubPagesBase = "/splashy-web-glow/";
+
 export default defineConfig({
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
     server: { entry: "server" },
+    prerender: isGithubPagesBuild ? { enabled: true, crawlLinks: true } : undefined,
+    router: isGithubPagesBuild ? { basepath: githubPagesBase } : undefined,
   },
+  nitro: isGithubPagesBuild ? false : undefined,
+  vite: isGithubPagesBuild ? { base: githubPagesBase } : undefined,
 });
