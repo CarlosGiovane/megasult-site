@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistemas — Megasult</title>
+  <meta name="description" content="ERP Infoecia para indústria e distribuição, e sistemas Linx/Totvs para varejo e moda. Implantação especializada por segmento.">
+  <link rel="icon" type="image/png" href="../public/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <!-- ── Navbar ───────────────────────────────────────────── -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="../" class="nav-logo">
+        <img src="../public/logo-megasult.png" alt="Megasult">
+      </a>
+      <div class="nav-links">
+        <a href="../contabilidade/">Contabilidade</a>
+        <a href="../consultoria/">Consultoria</a>
+        <a href="../sistemas/" class="active">Sistemas</a>
+        <a href="../marcas/">Marcas & Patentes</a>
+      </div>
+      <div class="nav-cta-wrap">
+        <a href="#contato" class="nav-cta">
+          Agendar demonstração
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div id="mobile-menu">
+    <a href="../contabilidade/">Contabilidade</a>
+    <a href="../consultoria/">Consultoria</a>
+    <a href="../sistemas/">Sistemas</a>
+    <a href="../marcas/">Marcas & Patentes</a>
+    <a href="#contato" class="mobile-cta">Agendar demonstração</a>
+  </div>
+
+  <!-- ── Hero ─────────────────────────────────────────────── -->
+  <section class="div-hero">
+    <div class="hero-dots"></div>
+    <div class="hero-blob blob-blue"></div>
+    <div class="hero-blob blob-gold"></div>
+    <div class="div-hero-inner">
+      <div class="div-hero-icon" style="background: var(--grad);">
+        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="3" width="20" height="14" rx="2"/>
+          <path d="M8 21h8M12 17v4"/>
+          <path d="M7 8h2M11 8h6M7 12h4M13 12h4"/>
+        </svg>
+      </div>
+      <h1>ERP e sistemas de gestão <span class="grad-text">especializados por segmento</span></h1>
+      <p class="tagline">Trabalhamos com duas linhas de produto: ERP Infoecia para indústria e distribuição, e Linx/Totvs para varejo e moda — sempre com consultoria de implantação e boas práticas do seu segmento.</p>
+      <div class="div-hero-btns">
+        <a href="#contato" class="btn-gold">
+          Agendar demonstração
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#segmentos" class="btn-ghost">Ver segmentos</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Highlights ────────────────────────────────────────── -->
+  <section style="padding: 5rem 0; background: var(--off);">
+    <div class="container">
+      <div class="highlights-grid">
+        <div class="highlight-card reveal">
+          <div class="hc-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+          </div>
+          <h3>Especialistas por segmento</h3>
+          <p>Implantação e consultoria com expertise do seu mercado, não soluções genéricas.</p>
+        </div>
+        <div class="highlight-card reveal">
+          <div class="hc-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+          </div>
+          <h3>Integração ponta a ponta</h3>
+          <p>Engenharia, produção, estoque, vendas, fiscal e financeiro em uma única plataforma.</p>
+        </div>
+        <div class="highlight-card reveal">
+          <div class="hc-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+          </div>
+          <h3>Dados em tempo real</h3>
+          <p>Dashboards e indicadores para decisões mais rápidas e assertivas no dia a dia.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Segments ──────────────────────────────────────────── -->
+  <section id="segmentos" style="padding: 5rem 0;">
+    <div class="container">
+      <div class="sec-header reveal">
+        <span class="sec-lbl">Nossas soluções</span>
+        <h2 class="sec-title">Escolha a linha certa para o seu negócio</h2>
+      </div>
+
+      <!-- Tab switcher -->
+      <div class="tabs-wrap reveal">
+        <button class="tab-btn active" type="button">ERP Infoecia — Indústria e Distribuição</button>
+        <button class="tab-btn" type="button">Linx / Totvs — Varejo e Moda</button>
+      </div>
+
+      <!-- Tab: Infoecia -->
+      <div class="tab-pane active">
+        <div class="segments-grid">
+
+          <div class="segment-card reveal">
+            <h3>Indústria Metalmecânica</h3>
+            <p class="seg-intro">Gestão inteligente com integração CAD e máquinas de corte para conectar engenharia e chão de fábrica.</p>
+            <ul class="seg-bullets">
+              <li>Integração entre engenharia e produção via CAD</li>
+              <li>PCP com ordens, prazos e capacidade produtiva</li>
+              <li>Gestão de chapas, perfis, componentes e insumos</li>
+              <li>Otimização de cortes e redução de desperdícios</li>
+              <li>Rastreabilidade completa da produção</li>
+              <li>Automação e integração com equipamentos industriais</li>
+            </ul>
+          </div>
+
+          <div class="segment-card reveal">
+            <h3>Indústria Metalúrgica</h3>
+            <p class="seg-intro">Processos integrados, controle rigoroso e alta produtividade para toda a operação metalúrgica.</p>
+            <ul class="seg-bullets">
+              <li>Gestão integrada de produção e etapas produtivas</li>
+              <li>Integração Engenharia × Fábrica</li>
+              <li>Planejamento e Controle da Produção (PCP)</li>
+              <li>Controle de materiais, insumos e estoques</li>
+              <li>Otimização de cortes e aproveitamento de matéria-prima</li>
+              <li>Indicadores de desempenho em tempo real</li>
+            </ul>
+          </div>
+
+          <div class="segment-card reveal">
+            <h3>Indústria de Alimentos e Bebidas</h3>
+            <p class="seg-intro">Qualidade, segurança alimentar e rastreabilidade em cada etapa da produção.</p>
+            <ul class="seg-bullets">
+              <li>Controle de qualidade e segurança alimentar</li>
+              <li>Rastreabilidade e controle de lotes</li>
+              <li>Engenharia de produto: BOM, fórmulas e fichas técnicas</li>
+              <li>Controle de validade e vencimentos</li>
+              <li>PCP e controle de armazenagem</li>
+              <li>Dashboards de produção, perdas e custos</li>
+            </ul>
+          </div>
+
+          <div class="segment-card reveal">
+            <h3>Indústria Química e Cosmética</h3>
+            <p class="seg-intro">Gestão de formulações, conformidade regulatória e rastreabilidade de lotes.</p>
+            <ul class="seg-bullets">
+              <li>Gestão de formulações e engenharia de produto</li>
+              <li>Controle de qualidade e conformidade regulatória</li>
+              <li>Rastreabilidade completa de lotes</li>
+              <li>Controle de matérias-primas e custos industriais</li>
+              <li>PCP e logística especializada</li>
+              <li>Sustentabilidade e redução de desperdícios</li>
+            </ul>
+          </div>
+
+          <div class="segment-card reveal">
+            <h3>Indústria de Plástico e Borracha</h3>
+            <p class="seg-intro">Controle de custos, redução de desperdícios e eficiência produtiva no setor.</p>
+            <ul class="seg-bullets">
+              <li>Controle de resinas, polímeros e compostos</li>
+              <li>PCP com programação de máquinas e capacidade</li>
+              <li>Consumo planejado × real e índices de refugo</li>
+              <li>Engenharia de produto e fichas técnicas</li>
+              <li>Gestão da qualidade industrial</li>
+              <li>Integração com automação e Indústria 4.0</li>
+            </ul>
+          </div>
+
+          <div class="segment-card reveal">
+            <h3>Indústria de Alumínio e Utilidades</h3>
+            <p class="seg-intro">Gestão integrada com foco em custo, qualidade e sustentabilidade.</p>
+            <ul class="seg-bullets">
+              <li>Controle de custos e ligas metálicas</li>
+              <li>PCP e capacidade produtiva</li>
+              <li>Reaproveitamento e redução de desperdícios</li>
+              <li>Engenharia de produtos e BOM</li>
+              <li>Gestão de qualidade e padronização</li>
+              <li>Controle de estoque e logística</li>
+            </ul>
+          </div>
+
+          <div class="segment-card reveal">
+            <h3>Blocos, Pavers e Pré-Moldados</h3>
+            <p class="seg-intro">Gestão integrada da fábrica: da compra dos insumos à entrega do produto final.</p>
+            <ul class="seg-bullets">
+              <li>Controle de cimento, areia, brita e aditivos</li>
+              <li>PCP alinhado à demanda e à capacidade</li>
+              <li>Controle de qualidade e rastreabilidade de lotes</li>
+              <li>Gestão do processo de cura</li>
+              <li>Controle de estoque e pátio</li>
+              <li>Logística, roteirização e entregas</li>
+            </ul>
+          </div>
+
+          <div class="segment-card reveal">
+            <h3>Móveis e Madeireiras</h3>
+            <p class="seg-intro">Integração entre projeto e fabricação para eliminar erros e desperdícios.</p>
+            <ul class="seg-bullets">
+              <li>Controle de MDF, MDP, chapas e ferragens</li>
+              <li>PCP e sequenciamento de fabricação</li>
+              <li>Engenharia de produtos e integração com projetos</li>
+              <li>Aproveitamento de madeira e redução de refugos</li>
+              <li>Gestão de qualidade e padronização</li>
+              <li>Integração com máquinas e automação</li>
+            </ul>
+          </div>
+
+          <div class="segment-card reveal">
+            <h3>Atacado e Distribuição</h3>
+            <p class="seg-intro">Grandes volumes, alta movimentação e logística complexa sob controle.</p>
+            <ul class="seg-bullets">
+              <li>Controle inteligente de estoque e giro</li>
+              <li>Compras estratégicas e gestão de fornecedores</li>
+              <li>Gestão comercial, margens e rentabilidade</li>
+              <li>Logística, expedição e roteirização</li>
+              <li>Controle fiscal e tributário automatizado</li>
+              <li>Integração com e-commerce e canais comerciais</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Tab: Linx/Totvs -->
+      <div class="tab-pane">
+        <div class="segments-grid">
+
+          <div class="segment-card reveal">
+            <h3>Indústria Têxtil e de Confecção</h3>
+            <p class="seg-intro">Software especialista com integração total da produção às vendas.</p>
+            <ul class="seg-bullets">
+              <li>Produção de semi-acabados e produtos acabados</li>
+              <li>Venda representante (off-line e on-line)</li>
+              <li>Portal B2B para clientes de atacado</li>
+              <li>Lojas de atacado e varejo integradas</li>
+              <li>E-commerce com estoque unificado</li>
+              <li>RFID para rastreabilidade e agilidade</li>
+            </ul>
+          </div>
+
+          <div class="segment-card reveal">
+            <h3>Varejo de Moda e Acessórios</h3>
+            <p class="seg-intro">Vestuário, calçados, acessórios, artigos esportivos, joias e relógios.</p>
+            <ul class="seg-bullets">
+              <li>Acelerador de giro com curva ABC e TIE</li>
+              <li>Inteligência promocional</li>
+              <li>Fidelização de clientes e crediário</li>
+              <li>Gestão de consignado</li>
+              <li>Mobilidade e dashboards</li>
+              <li>Software em nuvem</li>
+            </ul>
+          </div>
+
+          <div class="segment-card reveal">
+            <h3>Lojas de Calçados</h3>
+            <p class="seg-intro">Multimarcas, marcas próprias e franquias com melhores práticas do segmento.</p>
+            <ul class="seg-bullets">
+              <li>Sugestão de compras por grade e sazonalidade</li>
+              <li>Caixa fácil em menos de 20 segundos</li>
+              <li>Motor promocional com +2.000 regras</li>
+              <li>Gestão de consignado e crediário</li>
+              <li>E-commerce integrado às lojas físicas</li>
+              <li>Dashboards intuitivos</li>
+            </ul>
+          </div>
+
+          <div class="segment-card reveal">
+            <h3>Gestão de Redes de Lojas e Franquias</h3>
+            <p class="seg-intro">Padrões, indicadores e ativação ágil de novas lojas.</p>
+            <ul class="seg-bullets">
+              <li>Portal Modelo de regras de negócio</li>
+              <li>Cadastro centralizado de clientes e produtos</li>
+              <li>Conciliador de cartão</li>
+              <li>Indicadores de varejo (PA, TM, cobertura)</li>
+              <li>Desempenho da rede e comparativos</li>
+              <li>Ativação de novas lojas em poucas horas</li>
+            </ul>
+          </div>
+
+          <div class="segment-card reveal">
+            <h3>RFID — Etiquetas Inteligentes</h3>
+            <p class="seg-intro">Agilidade, segurança e rastreabilidade em todos os estágios do estoque.</p>
+            <ul class="seg-bullets">
+              <li>Contagem de grandes volumes em segundos</li>
+              <li>Conferência rápida e precisa</li>
+              <li>Maior acuracidade dos estoques</li>
+              <li>Rastreabilidade completa dos produtos</li>
+            </ul>
+          </div>
+
+          <div class="segment-card reveal">
+            <h3>Óticas</h3>
+            <p class="seg-intro">PDV com venda consultiva de lentes, óculos e tratamentos.</p>
+            <ul class="seg-bullets">
+              <li>Atendimento ágil e consultivo</li>
+              <li>Acelerador de giro (curva ABC, TIE)</li>
+              <li>Inteligência promocional</li>
+              <li>Fidelização de clientes</li>
+              <li>Dashboards e mobilidade</li>
+              <li>Gestão financeira/contábil</li>
+            </ul>
+          </div>
+
+          <div class="segment-card reveal">
+            <h3>Perfumaria e Cosméticos</h3>
+            <p class="seg-intro">Software especialista para o varejo de perfumaria e cosméticos.</p>
+            <ul class="seg-bullets">
+              <li>Acelerador de giro</li>
+              <li>Inteligência promocional</li>
+              <li>Fidelização de clientes</li>
+              <li>Desempenho de vendedores</li>
+              <li>Dashboards e mobilidade</li>
+              <li>Gestão financeira/contábil em nuvem</li>
+            </ul>
+          </div>
+
+          <div class="segment-card reveal">
+            <h3>Utilidades, Presentes e Brinquedos</h3>
+            <p class="seg-intro">Lojas de utilidades, presentes, brinquedos, livrarias e papelarias.</p>
+            <ul class="seg-bullets">
+              <li>Acelerador de giro</li>
+              <li>Inteligência promocional</li>
+              <li>Fidelização de clientes</li>
+              <li>Desempenho da rede</li>
+              <li>Dashboards intuitivos</li>
+              <li>Software em nuvem</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── CTA ───────────────────────────────────────────────── -->
+  <section id="contato" class="cta-section">
+    <div class="container">
+      <h2>Pronto para elevar a gestão da sua empresa?</h2>
+      <p>Agende uma demonstração gratuita e descubra como o ERP certo pode transformar a eficiência e os resultados do seu negócio.</p>
+      <div class="cta-btns">
+        <a href="https://wa.me/554432250311" target="_blank" rel="noopener" class="btn-gold">Agendar demonstração</a>
+        <a href="mailto:comercial.201@megasult.com.br" class="btn-white">Enviar e-mail</a>
+      </div>
+      <div class="cta-contacts">
+        <div class="cta-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.38 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.56a16 16 0 0 0 5.53 5.53l1.62-1.62a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <a href="tel:+554432250311">(44) 3225-0311 — Maringá</a>
+        </div>
+        <div class="cta-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <a href="mailto:comercial.201@megasult.com.br">comercial.201@megasult.com.br</a>
+        </div>
+      </div>
+      <div class="other-divs">
+        <h3>Outras divisões Megasult</h3>
+        <div class="other-divs-list">
+          <a href="../contabilidade/" class="other-div-link">Contabilidade</a>
+          <a href="../consultoria/" class="other-div-link">Consultoria</a>
+          <a href="../marcas/" class="other-div-link">Marcas & Patentes</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ────────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="../public/logo_megasult_neutra.png" alt="Megasult" class="footer-logo">
+        <p class="footer-tagline">Contabilidade, Consultoria, Sistemas e Marcas & Patentes para impulsionar o seu negócio.</p>
+        <div class="footer-socials">
+          <a href="https://www.instagram.com/megasult.franciscobeltrao/" target="_blank" rel="noopener" aria-label="Instagram" class="footer-social-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://www.facebook.com/megasult.franciscobeltrao/" target="_blank" rel="noopener" aria-label="Facebook" class="footer-social-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/megasult-megasult/" target="_blank" rel="noopener" aria-label="LinkedIn" class="footer-social-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="https://wa.me/554432250311" target="_blank" rel="noopener" aria-label="WhatsApp" class="footer-social-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Divisões</div>
+        <div class="footer-links">
+          <a href="../contabilidade/">Contabilidade</a>
+          <a href="../consultoria/">Consultoria</a>
+          <a href="../sistemas/">Sistemas</a>
+          <a href="../marcas/">Marcas & Patentes</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Sistemas — Maringá PR</div>
+        <div class="office">
+          <div class="office-addr">Av. João P. Vieira Filho, 672<br>SL 508 - Edif. New Center<br>Zona 01 - CEP 87020-015</div>
+          <div class="office-contacts">
+            <a href="mailto:comercial.201@megasult.com.br">comercial.201@megasult.com.br</a>
+            <a href="tel:+554432250311">(44) 3225-0311</a>
+            <a href="https://wa.me/554432250311" target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="footer-year"></span> Megasult. Todos os direitos reservados.</span>
+      <span>Francisco Beltrão · PR</span>
+    </div>
+  </footer>
+
+  <script src="../app.js"></script>
+</body>
+</html>
