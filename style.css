@@ -246,7 +246,7 @@ section { padding: 5rem 0; }
 .hero::before {
   content: '';
   position: absolute; inset: -24px;
-  background: url('public/images/azul fundo.png') center / cover no-repeat;
+  background: url('public/images/azul fundo.webp') center / cover no-repeat;
   filter: blur(8px);
   opacity: 0.45;
   pointer-events: none;
