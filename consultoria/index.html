@@ -1,394 +1,862 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Consultoria — Megasult</title>
-  <meta name="description" content="Consultoria de gestão empresarial, societária e tributária para destravar resultados e crescer com previsibilidade.">
-  <link rel="icon" type="image/png" href="../public/favicon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../style.css">
-</head>
-<body>
-
-  <!-- ── Navbar ───────────────────────────────────────────── -->
-  <nav id="navbar">
-    <div class="nav-inner">
-      <a href="../" class="nav-logo">
-        <img src="../public/logo-megasult.png" alt="Megasult">
-      </a>
-      <div class="nav-links">
-        <a href="../contabilidade/">Contabilidade</a>
-        <a href="../consultoria/" class="active">Consultoria</a>
-        <a href="../sistemas/">Sistemas</a>
-        <a href="../marcas/">Marcas & Patentes</a>
-      </div>
-      <div class="nav-cta-wrap">
-        <a href="#contato" class="nav-cta">
-          Falar com a divisão
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Consultoria — Megasult</title>
+    <meta
+      name="description"
+      content="Consultoria de gestão empresarial, societária e tributária para destravar resultados e crescer com previsibilidade."
+    />
+    <link rel="icon" type="image/png" href="../public/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  </head>
+  <body>
+    <!-- ── Navbar ───────────────────────────────────────────── -->
+    <nav id="navbar">
+      <div class="nav-inner">
+        <a href="../" class="nav-logo">
+          <img src="../public/logo-megasult.png" alt="Megasult" />
         </a>
-      </div>
-      <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </nav>
-
-  <div id="mobile-menu">
-    <a href="../contabilidade/">Contabilidade</a>
-    <a href="../consultoria/">Consultoria</a>
-    <a href="../sistemas/">Sistemas</a>
-    <a href="../marcas/">Marcas & Patentes</a>
-    <a href="#contato" class="mobile-cta">Falar com a divisão</a>
-  </div>
-
-  <!-- ── Hero ─────────────────────────────────────────────── -->
-  <section class="div-hero">
-    <div class="hero-dots"></div>
-    <div class="hero-blob blob-blue"></div>
-    <div class="hero-blob blob-gold"></div>
-    <div class="div-hero-inner">
-      <div class="div-hero-icon" style="background: var(--grad-gold);">
-        <svg viewBox="0 0 24 24" fill="none" stroke="#1a3270" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/>
-          <path d="M9 18h6M10 22h4"/>
-        </svg>
-      </div>
-      <h1>Gestão, estratégia e planejamento para crescer com <span class="grad-text">previsibilidade</span></h1>
-      <p class="tagline">Ajudamos empresários a organizar a operação, planejar tributos e implantar rotinas de gestão que fazem o negócio crescer com segurança e previsibilidade.</p>
-      <div class="div-hero-btns">
-        <a href="#contato" class="btn-gold">
-          Falar com um consultor
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-        <a href="#servicos" class="btn-ghost">Ver serviços</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── Highlights ────────────────────────────────────────── -->
-  <section style="padding: 5rem 0; background: var(--off);">
-    <div class="container">
-      <div class="highlights-grid">
-        <div class="highlight-card reveal">
-          <div class="hc-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h18v18H3z"/><path d="M3 9h18M9 21V9"/></svg>
-          </div>
-          <h3>Gestão empresarial</h3>
-          <p>Planejamento, controles internos, indicadores e desenvolvimento de equipes.</p>
-        </div>
-        <div class="highlight-card reveal">
-          <div class="hc-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-          </div>
-          <h3>Societária</h3>
-          <p>Proteção patrimonial, sucessão, reorganização e fusões & aquisições.</p>
-        </div>
-        <div class="highlight-card reveal">
-          <div class="hc-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          </div>
-          <h3>Tributária</h3>
-          <p>Planejamento, revisão e recuperação de tributos dentro da lei.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── Services ──────────────────────────────────────────── -->
-  <section id="servicos" style="padding: 5rem 0;">
-    <div class="container">
-      <div class="sec-header reveal">
-        <span class="sec-lbl">Nossas especialidades</span>
-        <h2 class="sec-title">Consultoria em três frentes</h2>
-      </div>
-
-      <!-- Gestão empresarial -->
-      <div class="service-group reveal">
-        <div class="group-title">Consultoria de gestão empresarial</div>
-        <div class="services-grid">
-          <div class="service-card">
-            <div class="service-check">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
-            </div>
-            <div class="service-body">
-              <h3>Planejamento Estratégico</h3>
-              <p>Definição das diretrizes de ação da empresa para os próximos anos, alinhando objetivos e estratégia.</p>
-            </div>
-          </div>
-          <div class="service-card">
-            <div class="service-check">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
-            </div>
-            <div class="service-body">
-              <h3>Diagnóstico e Análise de Viabilidade</h3>
-              <p>Capacidade da empresa gerar lucros, Ponto de Equilíbrio Econômico e Financeiro e necessidade de Capital de Giro.</p>
-            </div>
-          </div>
-          <div class="service-card">
-            <div class="service-check">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
-            </div>
-            <div class="service-body">
-              <h3>Análise e Estruturação de Controles Internos</h3>
-              <p>Ambiente de controle, qualidade da informação, gestão de compras e gestão de estoque.</p>
-            </div>
-          </div>
-          <div class="service-card">
-            <div class="service-check">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
-            </div>
-            <div class="service-body">
-              <h3>Apuração, Análise de Balanço e DRE</h3>
-              <p>Demonstrativos gerenciais, comparativos gráficos e indicadores de resultado e desempenho para apoiar decisões.</p>
-            </div>
-          </div>
-          <div class="service-card">
-            <div class="service-check">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
-            </div>
-            <div class="service-body">
-              <h3>Formação do Preço de Venda — Markup</h3>
-              <p>Cálculo do preço de venda de produtos e serviços com simulações de descontos e visão do ganho real.</p>
-            </div>
-          </div>
-          <div class="service-card">
-            <div class="service-check">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
-            </div>
-            <div class="service-body">
-              <h3>Planejamento Econômico e Financeiro</h3>
-              <p>Orçamentos, previsões de resultado, captação de recursos e melhoria do fluxo de caixa.</p>
-            </div>
-          </div>
-          <div class="service-card">
-            <div class="service-check">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
-            </div>
-            <div class="service-body">
-              <h3>Análise de Valor da Empresa</h3>
-              <p>Avaliação do valor real considerando capital intelectual, branding e mercado de atuação.</p>
-            </div>
-          </div>
-          <div class="service-card">
-            <div class="service-check">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
-            </div>
-            <div class="service-body">
-              <h3>Auditoria</h3>
-              <p>Exames de documentos, livros, registros financeiros e inspeções relacionadas ao controle do patrimônio.</p>
-            </div>
-          </div>
-          <div class="service-card">
-            <div class="service-check">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
-            </div>
-            <div class="service-body">
-              <h3>Liderança e Desenvolvimento de Equipe</h3>
-              <p>Desenvolvimento da liderança para melhores relações e comprometimento com resultados.</p>
-            </div>
-          </div>
-          <div class="service-card">
-            <div class="service-check">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
-            </div>
-            <div class="service-body">
-              <h3>Avaliação de Desempenho</h3>
-              <p>Objetivos, fatores, ferramentas e planejamento do processo de avaliação — antes, durante e pós.</p>
-            </div>
-          </div>
-          <div class="service-card">
-            <div class="service-check">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
-            </div>
-            <div class="service-body">
-              <h3>Remuneração</h3>
-              <p>Critérios de salário, comissões, prêmios, PLR e benefícios conforme Legislação Trabalhista e CCT.</p>
-            </div>
-          </div>
-          <div class="service-card">
-            <div class="service-check">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
-            </div>
-            <div class="service-body">
-              <h3>Rotatividade</h3>
-              <p>Plano de ação para reduzir turnover e seus impactos financeiros e de produtividade.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Societária -->
-      <div class="service-group reveal">
-        <div class="group-title">Consultoria societária</div>
-        <div class="services-grid">
-          <div class="service-card">
-            <div class="service-check">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
-            </div>
-            <div class="service-body">
-              <h3>Proteção Patrimonial</h3>
-              <p>Estruturação da destinação dos bens patrimoniais na pessoa física ou jurídica.</p>
-            </div>
-          </div>
-          <div class="service-card">
-            <div class="service-check">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
-            </div>
-            <div class="service-body">
-              <h3>Planejamento Sucessório</h3>
-              <p>Organização da sucessão familiar para transferência do patrimônio e continuidade da organização.</p>
-            </div>
-          </div>
-          <div class="service-card">
-            <div class="service-check">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
-            </div>
-            <div class="service-body">
-              <h3>Reorganização Societária</h3>
-              <p>Estruturação e adequação de tipos jurídicos — Ltda., EIRELI, S/A, Holdings e SPEs.</p>
-            </div>
-          </div>
-          <div class="service-card">
-            <div class="service-check">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
-            </div>
-            <div class="service-body">
-              <h3>Aquisições, Fusões, Cisões e Incorporações</h3>
-              <p>Acompanhamento das negociações, elaboração da documentação e registros junto aos órgãos competentes.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Tributária -->
-      <div class="service-group reveal">
-        <div class="group-title">Consultoria tributária</div>
-        <div class="services-grid">
-          <div class="service-card">
-            <div class="service-check">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
-            </div>
-            <div class="service-body">
-              <h3>Planejamento Tributário</h3>
-              <p>Identificação e sugestão de procedimentos legais para reduzir a carga tributária e maximizar resultados.</p>
-            </div>
-          </div>
-          <div class="service-card">
-            <div class="service-check">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
-            </div>
-            <div class="service-body">
-              <h3>Consultoria Fiscal para Exportadoras/Importadoras</h3>
-              <p>Habilitação nos órgãos competentes, enquadramento tributário e formação de custos e preço de venda.</p>
-            </div>
-          </div>
-          <div class="service-card">
-            <div class="service-check">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
-            </div>
-            <div class="service-body">
-              <h3>Consultoria Fiscal</h3>
-              <p>Redução de riscos de autuação e de pagamento indevido, apuração de tributos e aplicação do planejamento fiscal vigente.</p>
-            </div>
-          </div>
-          <div class="service-card">
-            <div class="service-check">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
-            </div>
-            <div class="service-body">
-              <h3>Revisão e Recuperação de Tributos</h3>
-              <p>Identificação de créditos não aproveitados, retificação de declarações e pedidos de ressarcimento, restituição ou compensação.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ── CTA ───────────────────────────────────────────────── -->
-  <section id="contato" class="cta-section">
-    <div class="container">
-      <h2>Pronto para crescer com previsibilidade?</h2>
-      <p>Fale com nossos consultores e descubra como podemos transformar a gestão e os resultados da sua empresa.</p>
-      <div class="cta-btns">
-        <a href="https://wa.me/554632112800" target="_blank" rel="noopener" class="btn-gold">Falar no WhatsApp</a>
-        <a href="mailto:contato@megasult.com.br" class="btn-white">Enviar e-mail</a>
-      </div>
-      <div class="cta-contacts">
-        <div class="cta-contact-item">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.38 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.56a16 16 0 0 0 5.53 5.53l1.62-1.62a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          <a href="tel:+554632112800">(46) 3211-2800</a>
-        </div>
-        <div class="cta-contact-item">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          <a href="mailto:contato@megasult.com.br">contato@megasult.com.br</a>
-        </div>
-      </div>
-      <div class="other-divs">
-        <h3>Outras divisões Megasult</h3>
-        <div class="other-divs-list">
-          <a href="../contabilidade/" class="other-div-link">Contabilidade</a>
-          <a href="../sistemas/" class="other-div-link">Sistemas</a>
-          <a href="../marcas/" class="other-div-link">Marcas & Patentes</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── Footer ────────────────────────────────────────────── -->
-  <footer class="footer">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <img src="../public/logo_megasult_neutra.png" alt="Megasult" class="footer-logo">
-        <p class="footer-tagline">Contabilidade, Consultoria, Sistemas e Marcas & Patentes para impulsionar o seu negócio.</p>
-        <div class="footer-socials">
-          <a href="https://www.instagram.com/megasult.franciscobeltrao/" target="_blank" rel="noopener" aria-label="Instagram" class="footer-social-link">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-          </a>
-          <a href="https://www.facebook.com/megasult.franciscobeltrao/" target="_blank" rel="noopener" aria-label="Facebook" class="footer-social-link">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-          </a>
-          <a href="https://www.linkedin.com/company/megasult-megasult/" target="_blank" rel="noopener" aria-label="LinkedIn" class="footer-social-link">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-          </a>
-          <a href="https://wa.me/554632112800" target="_blank" rel="noopener" aria-label="WhatsApp" class="footer-social-link">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-          </a>
-        </div>
-      </div>
-      <div>
-        <div class="footer-col-title">Divisões</div>
-        <div class="footer-links">
+        <div class="nav-links">
           <a href="../contabilidade/">Contabilidade</a>
-          <a href="../consultoria/">Consultoria</a>
+          <a href="../consultoria/" class="active">Consultoria</a>
           <a href="../sistemas/">Sistemas</a>
           <a href="../marcas/">Marcas & Patentes</a>
+          <a href="../#sobre">Sobre</a>
+          <a href="../#fale-conosco">Fale Conosco</a>
+        </div>
+        <div class="nav-cta-wrap">
+          <a href="#contato" class="nav-cta open-contact-modal">
+            Entrar em contato
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+        <button
+          class="hamburger"
+          id="hamburger"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <div id="mobile-menu">
+      <a href="../contabilidade/">Contabilidade</a>
+      <a href="../consultoria/">Consultoria</a>
+      <a href="../sistemas/">Sistemas</a>
+      <a href="../marcas/">Marcas & Patentes</a>
+      <a href="../#sobre">Sobre</a>
+      <a href="../#fale-conosco">Fale Conosco</a>
+      <a href="#contato" class="mobile-cta open-contact-modal">Entrar em contato</a>
+    </div>
+
+    <!-- ── Hero ─────────────────────────────────────────────── -->
+    <section class="div-hero split">
+      <div class="hero-dots"></div>
+      <div class="hero-blob blob-blue"></div>
+      <div class="hero-blob blob-gold"></div>
+      <div class="div-hero-inner">
+        <div>
+          <div class="div-hero-icon" style="background: var(--grad-gold)">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#1a3270"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path
+              d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"
+            />
+            <path d="M9 18h6M10 22h4" />
+          </svg>
+        </div>
+        <h1>
+          Gestão, estratégia e planejamento para crescer com
+          <span class="grad-text">previsibilidade</span>
+        </h1>
+        <p class="tagline">
+          Ajudamos empresários a organizar a operação, planejar tributos e
+          implantar rotinas de gestão que fazem o negócio crescer com segurança
+          e previsibilidade.
+        </p>
+        <div class="div-hero-btns">
+          <a href="#contato" class="btn-gold open-contact-modal">
+            Falar com um consultor
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+          <a href="#servicos" class="btn-ghost">Ver serviços</a>
+          </div>
+        </div>
+        <div class="div-hero-img">
+          <img
+            src="../public/images/consultoria1.png"
+            alt="Consultores em reunião de planejamento estratégico"
+          />
         </div>
       </div>
-      <div>
-        <div class="footer-col-title">Contato principal</div>
-        <div class="office">
-          <div class="office-city">Francisco Beltrão — PR</div>
-          <div class="office-addr">Rua Octaviano T. dos Santos, 1373<br>Edif. Vienna - Centro · CEP 85601-030</div>
-          <div class="office-contacts">
-            <a href="mailto:contato@megasult.com.br">contato@megasult.com.br</a>
-            <a href="tel:+554632112800">(46) 3211-2800</a>
-            <a href="https://wa.me/554632112800" target="_blank" rel="noopener">WhatsApp</a>
+    </section>
+
+    <!-- ── Highlights ────────────────────────────────────────── -->
+    <section style="padding: 5rem 0; background: var(--off)">
+      <div class="container">
+        <div class="highlights-grid">
+          <div class="highlight-card reveal">
+            <div class="hc-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M3 3h18v18H3z" />
+                <path d="M3 9h18M9 21V9" />
+              </svg>
+            </div>
+            <h3>Gestão empresarial</h3>
+            <p>
+              Planejamento, controles internos, indicadores e desenvolvimento de
+              equipes.
+            </p>
+          </div>
+          <div class="highlight-card reveal">
+            <div class="hc-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
+              </svg>
+            </div>
+            <h3>Societária</h3>
+            <p>
+              Proteção patrimonial, sucessão, reorganização e fusões &
+              aquisições.
+            </p>
+          </div>
+          <div class="highlight-card reveal">
+            <div class="hc-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                />
+              </svg>
+            </div>
+            <h3>Tributária</h3>
+            <p>
+              Planejamento, revisão e recuperação de tributos dentro da lei.
+            </p>
           </div>
         </div>
       </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© <span id="footer-year"></span> Megasult. Todos os direitos reservados.</span>
-      <span>Francisco Beltrão · PR</span>
-    </div>
-  </footer>
+    </section>
 
-  <script src="../app.js"></script>
-</body>
+    <!-- ── Services ──────────────────────────────────────────── -->
+    <section id="servicos" style="padding: 5rem 0">
+      <div class="container">
+        <div class="sec-header reveal">
+          <span class="sec-lbl">Nossas especialidades</span>
+          <h2 class="sec-title">Consultoria em três frentes</h2>
+        </div>
+
+        <!-- Gestão empresarial -->
+        <div class="service-group reveal">
+          <div class="group-title">Consultoria de gestão empresarial</div>
+          <div class="services-grid">
+            <div class="service-card">
+              <div class="service-check">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M20 6L9 17l-5-5" />
+                </svg>
+              </div>
+              <div class="service-body">
+                <h3>Planejamento Estratégico</h3>
+                <p>
+                  Definição das diretrizes de ação da empresa para os próximos
+                  anos, alinhando objetivos e estratégia.
+                </p>
+              </div>
+            </div>
+            <div class="service-card">
+              <div class="service-check">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M20 6L9 17l-5-5" />
+                </svg>
+              </div>
+              <div class="service-body">
+                <h3>Diagnóstico e Análise de Viabilidade</h3>
+                <p>
+                  Capacidade da empresa gerar lucros, Ponto de Equilíbrio
+                  Econômico e Financeiro e necessidade de Capital de Giro.
+                </p>
+              </div>
+            </div>
+            <div class="service-card">
+              <div class="service-check">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M20 6L9 17l-5-5" />
+                </svg>
+              </div>
+              <div class="service-body">
+                <h3>Análise e Estruturação de Controles Internos</h3>
+                <p>
+                  Ambiente de controle, qualidade da informação, gestão de
+                  compras e gestão de estoque.
+                </p>
+              </div>
+            </div>
+            <div class="service-card">
+              <div class="service-check">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M20 6L9 17l-5-5" />
+                </svg>
+              </div>
+              <div class="service-body">
+                <h3>Apuração, Análise de Balanço e DRE</h3>
+                <p>
+                  Demonstrativos gerenciais, comparativos gráficos e indicadores
+                  de resultado e desempenho para apoiar decisões.
+                </p>
+              </div>
+            </div>
+            <div class="service-card">
+              <div class="service-check">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M20 6L9 17l-5-5" />
+                </svg>
+              </div>
+              <div class="service-body">
+                <h3>Formação do Preço de Venda — Markup</h3>
+                <p>
+                  Cálculo do preço de venda de produtos e serviços com
+                  simulações de descontos e visão do ganho real.
+                </p>
+              </div>
+            </div>
+            <div class="service-card">
+              <div class="service-check">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M20 6L9 17l-5-5" />
+                </svg>
+              </div>
+              <div class="service-body">
+                <h3>Planejamento Econômico e Financeiro</h3>
+                <p>
+                  Orçamentos, previsões de resultado, captação de recursos e
+                  melhoria do fluxo de caixa.
+                </p>
+              </div>
+            </div>
+            <div class="service-card">
+              <div class="service-check">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M20 6L9 17l-5-5" />
+                </svg>
+              </div>
+              <div class="service-body">
+                <h3>Análise de Valor da Empresa</h3>
+                <p>
+                  Avaliação do valor real considerando capital intelectual,
+                  branding e mercado de atuação.
+                </p>
+              </div>
+            </div>
+            <div class="service-card">
+              <div class="service-check">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M20 6L9 17l-5-5" />
+                </svg>
+              </div>
+              <div class="service-body">
+                <h3>Auditoria</h3>
+                <p>
+                  Exames de documentos, livros, registros financeiros e
+                  inspeções relacionadas ao controle do patrimônio.
+                </p>
+              </div>
+            </div>
+            <div class="service-card">
+              <div class="service-check">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M20 6L9 17l-5-5" />
+                </svg>
+              </div>
+              <div class="service-body">
+                <h3>Liderança e Desenvolvimento de Equipe</h3>
+                <p>
+                  Desenvolvimento da liderança para melhores relações e
+                  comprometimento com resultados.
+                </p>
+              </div>
+            </div>
+            <div class="service-card">
+              <div class="service-check">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M20 6L9 17l-5-5" />
+                </svg>
+              </div>
+              <div class="service-body">
+                <h3>Avaliação de Desempenho</h3>
+                <p>
+                  Objetivos, fatores, ferramentas e planejamento do processo de
+                  avaliação — antes, durante e pós.
+                </p>
+              </div>
+            </div>
+            <div class="service-card">
+              <div class="service-check">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M20 6L9 17l-5-5" />
+                </svg>
+              </div>
+              <div class="service-body">
+                <h3>Remuneração</h3>
+                <p>
+                  Critérios de salário, comissões, prêmios, PLR e benefícios
+                  conforme Legislação Trabalhista e CCT.
+                </p>
+              </div>
+            </div>
+            <div class="service-card">
+              <div class="service-check">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M20 6L9 17l-5-5" />
+                </svg>
+              </div>
+              <div class="service-body">
+                <h3>Rotatividade</h3>
+                <p>
+                  Plano de ação para reduzir turnover e seus impactos
+                  financeiros e de produtividade.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Societária -->
+        <div class="service-group reveal">
+          <div class="group-title">Consultoria societária</div>
+          <div class="services-grid">
+            <div class="service-card">
+              <div class="service-check">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M20 6L9 17l-5-5" />
+                </svg>
+              </div>
+              <div class="service-body">
+                <h3>Proteção Patrimonial</h3>
+                <p>
+                  Estruturação da destinação dos bens patrimoniais na pessoa
+                  física ou jurídica.
+                </p>
+              </div>
+            </div>
+            <div class="service-card">
+              <div class="service-check">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M20 6L9 17l-5-5" />
+                </svg>
+              </div>
+              <div class="service-body">
+                <h3>Planejamento Sucessório</h3>
+                <p>
+                  Organização da sucessão familiar para transferência do
+                  patrimônio e continuidade da organização.
+                </p>
+              </div>
+            </div>
+            <div class="service-card">
+              <div class="service-check">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M20 6L9 17l-5-5" />
+                </svg>
+              </div>
+              <div class="service-body">
+                <h3>Reorganização Societária</h3>
+                <p>
+                  Estruturação e adequação de tipos jurídicos — Ltda., EIRELI,
+                  S/A, Holdings e SPEs.
+                </p>
+              </div>
+            </div>
+            <div class="service-card">
+              <div class="service-check">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M20 6L9 17l-5-5" />
+                </svg>
+              </div>
+              <div class="service-body">
+                <h3>Aquisições, Fusões, Cisões e Incorporações</h3>
+                <p>
+                  Acompanhamento das negociações, elaboração da documentação e
+                  registros junto aos órgãos competentes.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tributária -->
+        <div class="service-group reveal">
+          <div class="group-title">Consultoria tributária</div>
+          <div class="services-grid">
+            <div class="service-card">
+              <div class="service-check">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M20 6L9 17l-5-5" />
+                </svg>
+              </div>
+              <div class="service-body">
+                <h3>Planejamento Tributário</h3>
+                <p>
+                  Identificação e sugestão de procedimentos legais para reduzir
+                  a carga tributária e maximizar resultados.
+                </p>
+              </div>
+            </div>
+            <div class="service-card">
+              <div class="service-check">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M20 6L9 17l-5-5" />
+                </svg>
+              </div>
+              <div class="service-body">
+                <h3>Consultoria Fiscal para Exportadoras/Importadoras</h3>
+                <p>
+                  Habilitação nos órgãos competentes, enquadramento tributário e
+                  formação de custos e preço de venda.
+                </p>
+              </div>
+            </div>
+            <div class="service-card">
+              <div class="service-check">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M20 6L9 17l-5-5" />
+                </svg>
+              </div>
+              <div class="service-body">
+                <h3>Consultoria Fiscal</h3>
+                <p>
+                  Redução de riscos de autuação e de pagamento indevido,
+                  apuração de tributos e aplicação do planejamento fiscal
+                  vigente.
+                </p>
+              </div>
+            </div>
+            <div class="service-card">
+              <div class="service-check">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M20 6L9 17l-5-5" />
+                </svg>
+              </div>
+              <div class="service-body">
+                <h3>Revisão e Recuperação de Tributos</h3>
+                <p>
+                  Identificação de créditos não aproveitados, retificação de
+                  declarações e pedidos de ressarcimento, restituição ou
+                  compensação.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CTA ───────────────────────────────────────────────── -->
+    <section id="contato" class="cta-section">
+      <div class="container">
+        <h2>Pronto para crescer com previsibilidade?</h2>
+        <p>
+          Fale com nossos consultores e descubra como podemos transformar a
+          gestão e os resultados da sua empresa.
+        </p>
+        <div class="cta-btns">
+          <a
+            href="https://wa.me/554632112800"
+            target="_blank"
+            rel="noopener"
+            class="btn-gold"
+            >Falar no WhatsApp</a
+          >
+          <a href="mailto:contato@megasult.com.br" class="btn-white"
+            >Enviar e-mail</a
+          >
+        </div>
+        <div class="cta-contacts">
+          <div class="cta-contact-item">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.38 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.56a16 16 0 0 0 5.53 5.53l1.62-1.62a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"
+              />
+            </svg>
+            <a href="tel:+554632112800">(46) 3211-2800</a>
+          </div>
+          <div class="cta-contact-item">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+              />
+              <polyline points="22,6 12,13 2,6" />
+            </svg>
+            <a href="mailto:contato@megasult.com.br">contato@megasult.com.br</a>
+          </div>
+        </div>
+        <div class="other-divs">
+          <h3>Outras soluções Megasult</h3>
+          <div class="other-divs-list">
+            <a href="../contabilidade/" class="other-div-link">Contabilidade</a>
+            <a href="../sistemas/" class="other-div-link">Sistemas</a>
+            <a href="../marcas/" class="other-div-link">Marcas & Patentes</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Footer ────────────────────────────────────────────── -->
+    <footer class="footer">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img
+            src="../public/logo_megasult_neutra.png"
+            alt="Megasult"
+            class="footer-logo"
+          />
+          <p class="footer-tagline">
+            Contabilidade, Consultoria, Sistemas e Marcas & Patentes para
+            impulsionar o seu negócio.
+          </p>
+          <div class="footer-socials">
+            <a
+              href="https://www.instagram.com/megasult.franciscobeltrao/"
+              target="_blank"
+              rel="noopener"
+              aria-label="Instagram"
+              class="footer-social-link"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="2" y="2" width="20" height="20" rx="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+              </svg>
+            </a>
+            <a
+              href="https://www.facebook.com/megasult.franciscobeltrao/"
+              target="_blank"
+              rel="noopener"
+              aria-label="Facebook"
+              class="footer-social-link"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://www.linkedin.com/company/megasult-megasult/"
+              target="_blank"
+              rel="noopener"
+              aria-label="LinkedIn"
+              class="footer-social-link"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                />
+                <rect x="2" y="9" width="4" height="12" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+            </a>
+            <a
+              href="https://wa.me/554632112800"
+              target="_blank"
+              rel="noopener"
+              aria-label="WhatsApp"
+              class="footer-social-link"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-title">Soluções</div>
+          <div class="footer-links">
+            <a href="../contabilidade/">Contabilidade</a>
+            <a href="../consultoria/">Consultoria</a>
+            <a href="../sistemas/">Sistemas</a>
+            <a href="../marcas/">Marcas & Patentes</a>
+            <a href="../#sobre">Sobre</a>
+            <a href="../#fale-conosco">Fale Conosco</a>
+            <a href="https://megasult.vagas.solides.com.br/" target="_blank" rel="noopener">Trabalhe Conosco</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-title">Contato principal</div>
+          <div class="office">
+            <div class="office-city">Francisco Beltrão — PR</div>
+            <div class="office-addr">
+              Rua Octaviano T. dos Santos, 1373<br />Edif. Vienna - Centro · CEP
+              85601-030
+            </div>
+            <div class="office-contacts">
+              <a href="mailto:contato@megasult.com.br"
+                >contato@megasult.com.br</a
+              >
+              <a href="tel:+554632112800">(46) 3211-2800</a>
+              <a
+                href="https://wa.me/554632112800"
+                target="_blank"
+                rel="noopener"
+                >WhatsApp</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span
+          >© <span id="footer-year"></span> Megasult. Todos os direitos
+          reservados.</span
+        >
+        <span>Francisco Beltrão · PR</span>
+      </div>
+    </footer>
+
+    <script src="../app.js"></script>
+    <script src="../contact-modal.js"></script>
+  </body>
 </html>
