@@ -963,6 +963,18 @@ section {
   text-align: center;
   color: var(--white);
 }
+.div-hero::before {
+  content: "";
+  position: absolute;
+  inset: -24px;
+  background: url("public/images/fundo.jpeg") center / cover no-repeat;
+  opacity: 0.45;
+  pointer-events: none;
+}
+.div-hero > .hero-dots,
+.div-hero > .hero-blob {
+  display: none;
+}
 .div-hero .hero-dots {
   position: absolute;
   inset: 0;
