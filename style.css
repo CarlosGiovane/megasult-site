@@ -1550,6 +1550,16 @@ section {
 .modal-box.detail-modal-box::-webkit-scrollbar-thumb:hover {
   background-color: rgba(201, 162, 39, 0.55);
 }
+.detail-media {
+  margin-bottom: 1.5rem;
+}
+.detail-media img {
+  display: none;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 0.75rem;
+}
 .detail-img-placeholder {
   width: 100%;
   aspect-ratio: 16 / 9;
@@ -1562,7 +1572,6 @@ section {
   justify-content: center;
   gap: 0.5rem;
   color: var(--muted);
-  margin-bottom: 1.5rem;
 }
 .detail-img-placeholder svg {
   width: 32px;
