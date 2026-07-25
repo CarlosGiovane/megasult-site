@@ -54,16 +54,32 @@ document.addEventListener('DOMContentLoaded', () => {
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
   // ── Tab system (sistemas page) ─────────────────────────────
+  const tabsWrap = document.querySelector('.tabs-wrap');
   const tabBtns = document.querySelectorAll('.tab-btn');
   const tabPanes = document.querySelectorAll('.tab-pane');
   if (tabBtns.length && tabPanes.length) {
+    const indicator = tabsWrap ? tabsWrap.querySelector('.tabs-indicator') : null;
     let autoInterval;
     let userInteracted = false;
+    let cardHovered = false;
     let current = 0;
+
+    document.querySelectorAll('.segment-card').forEach(card => {
+      card.addEventListener('mouseenter', () => { cardHovered = true; });
+      card.addEventListener('mouseleave', () => { cardHovered = false; });
+    });
+
+    const moveIndicator = (idx) => {
+      if (!indicator) return;
+      const btn = tabBtns[idx];
+      indicator.style.width = btn.offsetWidth + 'px';
+      indicator.style.transform = `translateX(${btn.offsetLeft}px)`;
+    };
 
     const activateTab = (idx) => {
       tabBtns.forEach((b, i) => b.classList.toggle('active', i === idx));
       tabPanes.forEach((p, i) => p.classList.toggle('active', i === idx));
+      moveIndicator(idx);
       current = idx;
     };
 
@@ -75,11 +91,65 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
+    if (indicator) {
+      moveIndicator(current);
+      requestAnimationFrame(() => indicator.classList.add('ready'));
+      window.addEventListener('resize', () => moveIndicator(current));
+      window.addEventListener('load', () => moveIndicator(current));
+    }
+
     autoInterval = setInterval(() => {
-      if (!userInteracted) {
+      if (!userInteracted && !cardHovered) {
         activateTab((current + 1) % tabBtns.length);
       }
     }, 9000);
+  }
+
+  // ── Offices carousel (footer) ──────────────────────────────
+  const officesCarousel = document.getElementById('offices-carousel');
+  const officesTrack = document.getElementById('offices-track');
+  if (officesCarousel && officesTrack) {
+    const originalCards = Array.from(officesTrack.children);
+    originalCards.forEach(card => {
+      officesTrack.appendChild(card.cloneNode(true));
+    });
+
+    const gap = parseFloat(getComputedStyle(officesTrack).columnGap || getComputedStyle(officesTrack).gap) || 0;
+    const step = originalCards[0].getBoundingClientRect().width + gap;
+
+    let index = 0;
+    let paused = false;
+
+    const slide = () => {
+      if (paused) return;
+      index++;
+      officesTrack.style.transform = `translateX(-${step * index}px)`;
+      if (index === originalCards.length) {
+        officesTrack.addEventListener('transitionend', () => {
+          officesTrack.style.transition = 'none';
+          officesTrack.style.transform = 'translateX(0px)';
+          officesTrack.getBoundingClientRect();
+          officesTrack.style.transition = '';
+          index = 0;
+        }, { once: true });
+      }
+    };
+
+    setInterval(slide, 3200);
+    officesCarousel.addEventListener('mouseenter', () => { paused = true; });
+    officesCarousel.addEventListener('mouseleave', () => { paused = false; });
+  }
+
+  // ── Cursor-follow zoom (soluções diagram) ──────────────────
+  const diagramWrap = document.querySelector('.solucoes-diagram');
+  const diagramImg = diagramWrap ? diagramWrap.querySelector('img') : null;
+  if (diagramWrap && diagramImg) {
+    diagramWrap.addEventListener('mousemove', (e) => {
+      const rect = diagramWrap.getBoundingClientRect();
+      const x = ((e.clientX - rect.left) / rect.width) * 100;
+      const y = ((e.clientY - rect.top) / rect.height) * 100;
+      diagramImg.style.transformOrigin = `${x}% ${y}%`;
+    });
   }
 
 });
