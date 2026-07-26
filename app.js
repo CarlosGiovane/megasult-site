@@ -152,4 +152,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // ── Demo float dismiss (sistemas page) ─────────────────────
+  const demoFloatWrap = document.getElementById('demoFloatWrap');
+  const demoFloatClose = document.getElementById('demoFloatClose');
+  if (demoFloatWrap && demoFloatClose) {
+    demoFloatClose.addEventListener('click', () => {
+      demoFloatWrap.style.display = 'none';
+    });
+  }
+
 });
