@@ -3,39 +3,39 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Soluções — Megasult</title>
+    <title>Megasult — Hero opção 3 (preview)</title>
     <meta
       name="description"
-      content="Conheça as soluções Megasult: Contabilidade, Consultoria, Sistemas ERP e Marcas & Patentes para impulsionar o seu negócio."
+      content="Contabilidade, Consultoria, Sistemas ERP e Marcas & Patentes para impulsionar o seu negócio. Mais de 30 anos de experiência no mercado."
     />
-    <link rel="icon" type="image/png" href="../public/favicon.png" />
+    <link rel="icon" type="image/png" href="public/favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="style.css" />
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   </head>
   <body>
     <!-- ── Navbar ───────────────────────────────────────────── -->
     <nav id="navbar">
       <div class="nav-inner">
-        <a href="../" class="nav-logo">
-          <img src="../public/logo-megasult.png" alt="Megasult" />
+        <a href="." class="nav-logo">
+          <img src="public/logo-megasult.png" alt="Megasult" />
         </a>
         <div class="nav-links">
-          <a href="../contabilidade/">Contabilidade</a>
-          <a href="../consultoria/">Consultoria</a>
-          <a href="../sistemas/">Sistemas</a>
-          <a href="../marcas/">Marcas & Patentes</a>
-          <a href="../sobre/">Sobre</a>
-          <a href="../#fale-conosco">Fale Conosco</a>
+          <a href="contabilidade/">Contabilidade</a>
+          <a href="consultoria/">Consultoria</a>
+          <a href="sistemas/">Sistemas</a>
+          <a href="marcas/">Marcas & Patentes</a>
+          <a href="sobre/">Sobre</a>
+          <a href="#fale-conosco">Fale Conosco</a>
         </div>
         <div class="nav-cta-wrap">
-          <a href="#contato" class="nav-cta open-contact-modal">
-            Entrar em contato
+          <a href="solucoes/" class="nav-cta">
+            Soluções
             <svg
               viewBox="0 0 24 24"
               fill="none"
@@ -59,45 +59,53 @@
       </div>
     </nav>
 
+    <div class="hero-preview-tag">
+      Hero:
+      <a href=".">Principal</a>
+      <a href="hero-preview-2.html">2</a>
+      <a href="hero-preview-3.html" class="active">3</a>
+    </div>
+
+    <!-- Mobile menu -->
     <div id="mobile-menu">
-      <a href="../contabilidade/">Contabilidade</a>
-      <a href="../consultoria/">Consultoria</a>
-      <a href="../sistemas/">Sistemas</a>
-      <a href="../marcas/">Marcas & Patentes</a>
-      <a href="../sobre/">Sobre</a>
-      <a href="../#fale-conosco">Fale Conosco</a>
-      <a href="#contato" class="mobile-cta open-contact-modal"
-        >Entrar em contato</a
-      >
+      <a href="contabilidade/">Contabilidade</a>
+      <a href="consultoria/">Consultoria</a>
+      <a href="sistemas/">Sistemas</a>
+      <a href="marcas/">Marcas & Patentes</a>
+      <a href="sobre/">Sobre</a>
+      <a href="#fale-conosco">Fale Conosco</a>
+      <a href="#fale-conosco" class="mobile-cta">Entrar em contato</a>
     </div>
 
     <!-- ── Hero ─────────────────────────────────────────────── -->
-    <section class="div-hero">
+    <section class="hero">
       <div class="hero-dots"></div>
       <div class="hero-blob blob-blue"></div>
       <div class="hero-blob blob-gold"></div>
-      <div class="div-hero-inner">
-        <h1>
-          Soluções especializadas para <span class="grad-text">cada área</span>
-          do seu negócio
-        </h1>
-        <p class="tagline">
-          Contabilidade, Consultoria, Sistemas e Marcas & Patentes — tudo que
-          sua empresa precisa em um só grupo.
-        </p>
-      </div>
-    </section>
+      <div class="hero-inner">
+        <div class="hero-top">
+          <div class="hero-top-text">
+            <h1>
+              Soluções Completas <span class="grad-text">para gestão</span> do
+              seu negócio
+            </h1>
+            <p>
+              Contabilidade, Consultoria, Sistemas, Marcas e Patentes — tudo que
+              sua empresa precisa.
+            </p>
+          </div>
+          <div class="hero-top-photo">
+            <img
+              src="public/images/team2f.png"
+              alt="Equipe Megasult"
+              loading="lazy"
+            />
+          </div>
+        </div>
 
-    <!-- ── Division cards ───────────────────────────────────── -->
-    <section id="solucoes" style="padding: 5rem 0; background: var(--off)">
-      <div class="container">
-        <!-- <div class="sec-header center reveal">
-          <span class="sec-lbl">Nossas Soluções</span>
-        </div> -->
-        <div class="divisions-grid">
-          <!-- Contabilidade -->
-          <div class="div-card reveal">
-            <div class="div-icon primary">
+        <div class="hero-cards">
+          <a href="contabilidade/" class="hero-card">
+            <div class="hero-card-ico primary">
               <svg
                 viewBox="0 0 24 24"
                 fill="none"
@@ -113,34 +121,23 @@
                 />
               </svg>
             </div>
-            <h3>Contabilidade</h3>
-            <p>
-              Escritório contábil completo: fiscal, trabalhista e tributário com
-              agilidade e conformidade.
-            </p>
-            <div class="div-card-btns">
-              <a href="../contabilidade/" class="div-btn-sm">
-                Ver serviços
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </a>
-              <a href="../contabilidade/#contato" class="div-btn-sm ghost"
-                >Entrar em contato</a
+            <span class="hero-card-title">Contabilidade</span>
+            <span class="hero-card-arrow">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
               >
-            </div>
-          </div>
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </span>
+          </a>
 
-          <!-- Consultoria -->
-          <div class="div-card gold-accent reveal">
-            <div class="div-icon gold">
+          <a href="consultoria/" class="hero-card">
+            <div class="hero-card-ico gold">
               <svg
                 viewBox="0 0 24 24"
                 fill="none"
@@ -155,34 +152,23 @@
                 <path d="M9 18h6M10 22h4" />
               </svg>
             </div>
-            <h3>Consultoria</h3>
-            <p>
-              Consultoria de gestão, societária e tributária para destravar
-              resultados e crescer com previsibilidade.
-            </p>
-            <div class="div-card-btns">
-              <a href="../consultoria/" class="div-btn-sm">
-                Ver serviços
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </a>
-              <a href="../consultoria/#contato" class="div-btn-sm ghost"
-                >Entrar em contato</a
+            <span class="hero-card-title">Consultoria</span>
+            <span class="hero-card-arrow">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
               >
-            </div>
-          </div>
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </span>
+          </a>
 
-          <!-- Sistemas -->
-          <div class="div-card reveal">
-            <div class="div-icon primary">
+          <a href="sistemas/" class="hero-card">
+            <div class="hero-card-ico primary">
               <svg
                 viewBox="0 0 24 24"
                 fill="none"
@@ -197,34 +183,23 @@
                 <path d="M7 12h4M13 12h4" />
               </svg>
             </div>
-            <h3>Sistemas</h3>
-            <p>
-              Soluções ERP indústria e distribuição, e sistemas Textil, varejo e
-              moda.
-            </p>
-            <div class="div-card-btns">
-              <a href="../sistemas/" class="div-btn-sm">
-                Ver soluções
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </a>
-              <a href="../sistemas/#contato" class="div-btn-sm ghost"
-                >Entrar em contato</a
+            <span class="hero-card-title">Sistemas</span>
+            <span class="hero-card-arrow">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
               >
-            </div>
-          </div>
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </span>
+          </a>
 
-          <!-- Marcas & Patentes -->
-          <div class="div-card gold-accent reveal">
-            <div class="div-icon gold">
+          <a href="marcas/" class="hero-card">
+            <div class="hero-card-ico gold">
               <svg
                 viewBox="0 0 24 24"
                 fill="none"
@@ -237,36 +212,44 @@
                 <path d="m9 12 2 2 4-4" />
               </svg>
             </div>
-            <h3>Marcas & Patentes</h3>
-            <p>
-              Registro de marcas, patentes, direito autoral, software e código
-              de barras com segurança jurídica.
-            </p>
-            <div class="div-card-btns">
-              <a href="../marcas/" class="div-btn-sm">
-                Ver serviços
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </a>
-              <a href="../marcas/#contato" class="div-btn-sm ghost"
-                >Entrar em contato</a
+            <span class="hero-card-title">Marcas & Patentes</span>
+            <span class="hero-card-arrow">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
               >
-            </div>
-          </div>
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </span>
+          </a>
+        </div>
+        <div class="hero-btns">
+          <a href="solucoes/" class="btn-gold">
+            Conhecer as soluções
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+          <a href="sobre/" class="btn-ghost">Sobre a Megasult</a>
         </div>
       </div>
     </section>
 
-    <!-- ── CTA ───────────────────────────────────────────────── -->
-    <section id="contato" class="cta-section">
+    <!-- ── Fale Conosco ──────────────────────────────────────── -->
+    <section id="fale-conosco" class="cta-section">
       <div class="container">
         <div class="cta-grid">
           <div class="cta-main">
@@ -375,9 +358,10 @@
     <!-- ── Footer ────────────────────────────────────────────── -->
     <footer class="footer">
       <div class="footer-grid">
+        <!-- Brand -->
         <div class="footer-brand">
           <img
-            src="../public/logo_megasult_neutra.png"
+            src="public/logo_megasult_neutra.png"
             alt="Megasult"
             class="footer-logo"
           />
@@ -470,20 +454,24 @@
             </a>
           </div>
         </div>
+
+        <!-- Divisions -->
         <div>
           <div class="footer-col-title">Soluções</div>
           <div class="footer-links">
-            <a href="../contabilidade/">Contabilidade</a>
-            <a href="../consultoria/">Consultoria</a>
-            <a href="../sistemas/">Sistemas</a>
-            <a href="../marcas/">Marcas & Patentes</a>
+            <a href="contabilidade/">Contabilidade</a>
+            <a href="consultoria/">Consultoria</a>
+            <a href="sistemas/">Sistemas</a>
+            <a href="marcas/">Marcas & Patentes</a>
           </div>
         </div>
+
+        <!-- Institutional -->
         <div>
           <div class="footer-col-title">Institucional</div>
           <div class="footer-links">
-            <a href="../sobre/">Sobre</a>
-            <a href="../#fale-conosco">Fale Conosco</a>
+            <a href="sobre/">Sobre</a>
+            <a href="#fale-conosco">Fale Conosco</a>
             <a
               href="https://megasult.vagas.solides.com.br/"
               target="_blank"
@@ -675,8 +663,8 @@
       </div>
     </footer>
 
-    <script src="../app.js"></script>
-    <script src="../contact-modal.js"></script>
+    <script src="app.js"></script>
+    <script src="contact-modal.js"></script>
 
     <a
       href="https://wa.me/554632112800"
