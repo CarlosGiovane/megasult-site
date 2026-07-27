@@ -2285,6 +2285,18 @@ section {
     max-width: 440px;
     margin: 0 auto;
   }
+  .cta-card-item {
+    gap: 0.65rem;
+    padding: 0.85rem 0.75rem;
+  }
+  .cta-card-ico {
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
+  }
+  .cta-card-val {
+    font-size: 0.82rem;
+  }
 }
 
 .cta-offices {
