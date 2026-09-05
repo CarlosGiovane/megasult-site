@@ -1,0 +1,354 @@
+PROMPTS PARA GERACAO DAS IMAGENS DOS CARDS - MEGASULT
+Gerado de docs/imagens-cards-ia.md | 48 imagens
+
+COMO USAR: cole um bloco PROMPT por vez na IA de imagem (ChatGPT, Gemini,
+Midjourney, Firefly, Ideogram). Salve o resultado em public/images/detalhes/
+com o nome indicado em ARQUIVO. Midjourney: acrescente --ar 16:9 --style raw
+
+==========================================================================
+CONTABILIDADE — 6 IMAGENS
+==========================================================================
+
+--- 01/48 ---
+ARQUIVO: public/images/detalhes/constituicao.jpg
+CARD...: Constituição, alteração e legalização de empresas
+PROMPT.:
+Fotografia corporativa profissional, realista, alta qualidade, luz natural suave, ambiente brasileiro contemporaneo, composicao limpa com espaco negativo, profundidade de campo suave, paleta harmonizando azul-marinho (#1a3270) e detalhes em dourado (#c9a227), clima confiavel e sofisticado. Formato widescreen 16:9, 1200x675px. Sem texto, sem letras, sem numeros, sem logotipos, sem marca d'agua. CENA: Dois empresários assinando o contrato social sobre a mesa de um escritório moderno, pasta de documentos e caneta em destaque, aperto de mãos ao fundo desfocado
+
+
+--- 02/48 ---
+ARQUIVO: public/images/detalhes/fiscal.jpg
+CARD...: Contabilidade fiscal
+PROMPT.:
+Fotografia corporativa profissional, realista, alta qualidade, luz natural suave, ambiente brasileiro contemporaneo, composicao limpa com espaco negativo, profundidade de campo suave, paleta harmonizando azul-marinho (#1a3270) e detalhes em dourado (#c9a227), clima confiavel e sofisticado. Formato widescreen 16:9, 1200x675px. Sem texto, sem letras, sem numeros, sem logotipos, sem marca d'agua. CENA: Contador analisando balanço e demonstrativos contábeis em monitor com gráficos, livros contábeis e calculadora sobre a mesa
+
+
+--- 03/48 ---
+ARQUIVO: public/images/detalhes/escrituracao.jpg
+CARD...: Escrituração fiscal digital
+PROMPT.:
+Fotografia corporativa profissional, realista, alta qualidade, luz natural suave, ambiente brasileiro contemporaneo, composicao limpa com espaco negativo, profundidade de campo suave, paleta harmonizando azul-marinho (#1a3270) e detalhes em dourado (#c9a227), clima confiavel e sofisticado. Formato widescreen 16:9, 1200x675px. Sem texto, sem letras, sem numeros, sem logotipos, sem marca d'agua. CENA: Mãos digitando em teclado com painel de dados fiscais e notas eletrônicas na tela, ambiente de escritório organizado
+
+
+--- 04/48 ---
+ARQUIVO: public/images/detalhes/folha.jpg
+CARD...: Folha de pagamento
+PROMPT.:
+Fotografia corporativa profissional, realista, alta qualidade, luz natural suave, ambiente brasileiro contemporaneo, composicao limpa com espaco negativo, profundidade de campo suave, paleta harmonizando azul-marinho (#1a3270) e detalhes em dourado (#c9a227), clima confiavel e sofisticado. Formato widescreen 16:9, 1200x675px. Sem texto, sem letras, sem numeros, sem logotipos, sem marca d'agua. CENA: Profissional de RH revisando planilha de folha de pagamento em notebook, crachás e pastas de colaboradores sobre a mesa
+
+
+--- 05/48 ---
+ARQUIVO: public/images/detalhes/ativos.jpg
+CARD...: Controle de ativos imobilizados
+PROMPT.:
+Fotografia corporativa profissional, realista, alta qualidade, luz natural suave, ambiente brasileiro contemporaneo, composicao limpa com espaco negativo, profundidade de campo suave, paleta harmonizando azul-marinho (#1a3270) e detalhes em dourado (#c9a227), clima confiavel e sofisticado. Formato widescreen 16:9, 1200x675px. Sem texto, sem letras, sem numeros, sem logotipos, sem marca d'agua. CENA: Profissional com tablet fazendo inventário de equipamentos e máquinas etiquetadas em depósito empresarial iluminado
+
+
+--- 06/48 ---
+ARQUIVO: public/images/detalhes/auditoria.jpg
+CARD...: Auditoria e perícias
+PROMPT.:
+Fotografia corporativa profissional, realista, alta qualidade, luz natural suave, ambiente brasileiro contemporaneo, composicao limpa com espaco negativo, profundidade de campo suave, paleta harmonizando azul-marinho (#1a3270) e detalhes em dourado (#c9a227), clima confiavel e sofisticado. Formato widescreen 16:9, 1200x675px. Sem texto, sem letras, sem numeros, sem logotipos, sem marca d'agua. CENA: Auditor conferindo relatórios financeiros impressos com óculos e lupa sobre a mesa, pilha organizada de documentos
+
+==========================================================================
+CONSULTORIA — 20 IMAGENS
+==========================================================================
+
+--- 07/48 ---
+ARQUIVO: public/images/detalhes/planejamento-estrategico.jpg
+CARD...: Planejamento Estratégico
+PROMPT.:
+Fotografia corporativa profissional, realista, alta qualidade, luz natural suave, ambiente brasileiro contemporaneo, composicao limpa com espaco negativo, profundidade de campo suave, paleta harmonizando azul-marinho (#1a3270) e detalhes em dourado (#c9a227), clima confiavel e sofisticado. Formato widescreen 16:9, 1200x675px. Sem texto, sem letras, sem numeros, sem logotipos, sem marca d'agua. CENA: Equipe executiva em reunião diante de quadro branco com metas, setas e plano de ação de longo prazo, post-its coloridos
+
+
+--- 08/48 ---
+ARQUIVO: public/images/detalhes/diagnostico-viabilidade.jpg
+CARD...: Diagnóstico e Análise de Viabilidade
+PROMPT.:
+Fotografia corporativa profissional, realista, alta qualidade, luz natural suave, ambiente brasileiro contemporaneo, composicao limpa com espaco negativo, profundidade de campo suave, paleta harmonizando azul-marinho (#1a3270) e detalhes em dourado (#c9a227), clima confiavel e sofisticado. Formato widescreen 16:9, 1200x675px. Sem texto, sem letras, sem numeros, sem logotipos, sem marca d'agua. CENA: Consultor apresentando gráfico de ponto de equilíbrio em notebook para dois empresários atentos
+
+
+--- 09/48 ---
+ARQUIVO: public/images/detalhes/controles-internos.jpg
+CARD...: Análise e Estruturação de Controles Internos
+PROMPT.:
+Fotografia corporativa profissional, realista, alta qualidade, luz natural suave, ambiente brasileiro contemporaneo, composicao limpa com espaco negativo, profundidade de campo suave, paleta harmonizando azul-marinho (#1a3270) e detalhes em dourado (#c9a227), clima confiavel e sofisticado. Formato widescreen 16:9, 1200x675px. Sem texto, sem letras, sem numeros, sem logotipos, sem marca d'agua. CENA: Fluxograma de processos de compras e estoque desenhado em quadro de vidro, consultor apontando as etapas
+
+
+--- 10/48 ---
+ARQUIVO: public/images/detalhes/balanco-dre.jpg
+CARD...: Apuração, Análise de Balanço e Demonstrativo de Resultado
+PROMPT.:
+Fotografia corporativa profissional, realista, alta qualidade, luz natural suave, ambiente brasileiro contemporaneo, composicao limpa com espaco negativo, profundidade de campo suave, paleta harmonizando azul-marinho (#1a3270) e detalhes em dourado (#c9a227), clima confiavel e sofisticado. Formato widescreen 16:9, 1200x675px. Sem texto, sem letras, sem numeros, sem logotipos, sem marca d'agua. CENA: Dashboard financeiro com gráficos comparativos em monitor amplo, relatório impresso ao lado, gestor analisando os indicadores
+
+
+--- 11/48 ---
+ARQUIVO: public/images/detalhes/markup.jpg
+CARD...: Formação do Preço de Venda — Markup
+PROMPT.:
+Fotografia corporativa profissional, realista, alta qualidade, luz natural suave, ambiente brasileiro contemporaneo, composicao limpa com espaco negativo, profundidade de campo suave, paleta harmonizando azul-marinho (#1a3270) e detalhes em dourado (#c9a227), clima confiavel e sofisticado. Formato widescreen 16:9, 1200x675px. Sem texto, sem letras, sem numeros, sem logotipos, sem marca d'agua. CENA: Mãos usando calculadora ao lado de planilha de custos e precificação de produtos, etiquetas de preço sobre a mesa
+
+
+--- 12/48 ---
+ARQUIVO: public/images/detalhes/planejamento-economico.jpg
+CARD...: Planejamento Econômico e Financeiro
+PROMPT.:
+Fotografia corporativa profissional, realista, alta qualidade, luz natural suave, ambiente brasileiro contemporaneo, composicao limpa com espaco negativo, profundidade de campo suave, paleta harmonizando azul-marinho (#1a3270) e detalhes em dourado (#c9a227), clima confiavel e sofisticado. Formato widescreen 16:9, 1200x675px. Sem texto, sem letras, sem numeros, sem logotipos, sem marca d'agua. CENA: Consultor e empresário analisando projeção orçamentária anual em gráfico de linhas ascendente na tela
+
+
+--- 13/48 ---
+ARQUIVO: public/images/detalhes/valor-empresa.jpg
+CARD...: Análise de Valor da Empresa
+PROMPT.:
+Fotografia corporativa profissional, realista, alta qualidade, luz natural suave, ambiente brasileiro contemporaneo, composicao limpa com espaco negativo, profundidade de campo suave, paleta harmonizando azul-marinho (#1a3270) e detalhes em dourado (#c9a227), clima confiavel e sofisticado. Formato widescreen 16:9, 1200x675px. Sem texto, sem letras, sem numeros, sem logotipos, sem marca d'agua. CENA: Apresentação executiva com curva de valuation e crescimento em telão, pequena plateia de gestores
+
+
+--- 14/48 ---
+ARQUIVO: public/images/detalhes/auditoria-consultoria.jpg
+CARD...: Auditoria
+PROMPT.:
+Fotografia corporativa profissional, realista, alta qualidade, luz natural suave, ambiente brasileiro contemporaneo, composicao limpa com espaco negativo, profundidade de campo suave, paleta harmonizando azul-marinho (#1a3270) e detalhes em dourado (#c9a227), clima confiavel e sofisticado. Formato widescreen 16:9, 1200x675px. Sem texto, sem letras, sem numeros, sem logotipos, sem marca d'agua. CENA: Auditora examinando livros contábeis e extratos financeiros em sala de reunião envidraçada
+
+
+--- 15/48 ---
+ARQUIVO: public/images/detalhes/lideranca.jpg
+CARD...: Liderança e Desenvolvimento de Equipe
+PROMPT.:
+Fotografia corporativa profissional, realista, alta qualidade, luz natural suave, ambiente brasileiro contemporaneo, composicao limpa com espaco negativo, profundidade de campo suave, paleta harmonizando azul-marinho (#1a3270) e detalhes em dourado (#c9a227), clima confiavel e sofisticado. Formato widescreen 16:9, 1200x675px. Sem texto, sem letras, sem numeros, sem logotipos, sem marca d'agua. CENA: Líder orientando equipe reunida em círculo em ambiente de trabalho colaborativo e descontraído
+
+
+--- 16/48 ---
+ARQUIVO: public/images/detalhes/avaliacao-desempenho.jpg
+CARD...: Avaliação de Desempenho
+PROMPT.:
+Fotografia corporativa profissional, realista, alta qualidade, luz natural suave, ambiente brasileiro contemporaneo, composicao limpa com espaco negativo, profundidade de campo suave, paleta harmonizando azul-marinho (#1a3270) e detalhes em dourado (#c9a227), clima confiavel e sofisticado. Formato widescreen 16:9, 1200x675px. Sem texto, sem letras, sem numeros, sem logotipos, sem marca d'agua. CENA: Gestora e colaborador em conversa de feedback um a um, formulário de avaliação sobre a mesa
+
+
+--- 17/48 ---
+ARQUIVO: public/images/detalhes/remuneracao.jpg
+CARD...: Remuneração
+PROMPT.:
+Fotografia corporativa profissional, realista, alta qualidade, luz natural suave, ambiente brasileiro contemporaneo, composicao limpa com espaco negativo, profundidade de campo suave, paleta harmonizando azul-marinho (#1a3270) e detalhes em dourado (#c9a227), clima confiavel e sofisticado. Formato widescreen 16:9, 1200x675px. Sem texto, sem letras, sem numeros, sem logotipos, sem marca d'agua. CENA: Reunião de RH discutindo pacote de salários e benefícios, notebook com tabela salarial e documentos
+
+
+--- 18/48 ---
+ARQUIVO: public/images/detalhes/rotatividade.jpg
+CARD...: Rotatividade
+PROMPT.:
+Fotografia corporativa profissional, realista, alta qualidade, luz natural suave, ambiente brasileiro contemporaneo, composicao limpa com espaco negativo, profundidade de campo suave, paleta harmonizando azul-marinho (#1a3270) e detalhes em dourado (#c9a227), clima confiavel e sofisticado. Formato widescreen 16:9, 1200x675px. Sem texto, sem letras, sem numeros, sem logotipos, sem marca d'agua. CENA: Analista de RH avaliando gráfico de turnover em tela, ao fundo equipe trabalhando no escritório
+
+
+--- 19/48 ---
+ARQUIVO: public/images/detalhes/protecao-patrimonial.jpg
+CARD...: Proteção Patrimonial
+PROMPT.:
+Fotografia corporativa profissional, realista, alta qualidade, luz natural suave, ambiente brasileiro contemporaneo, composicao limpa com espaco negativo, profundidade de campo suave, paleta harmonizando azul-marinho (#1a3270) e detalhes em dourado (#c9a227), clima confiavel e sofisticado. Formato widescreen 16:9, 1200x675px. Sem texto, sem letras, sem numeros, sem logotipos, sem marca d'agua. CENA: Advogado e empresário revisando documentos de bens e imóveis em escritório sóbrio, planta de imóvel ao fundo
+
+
+--- 20/48 ---
+ARQUIVO: public/images/detalhes/planejamento-sucessorio.jpg
+CARD...: Planejamento Sucessório
+PROMPT.:
+Fotografia corporativa profissional, realista, alta qualidade, luz natural suave, ambiente brasileiro contemporaneo, composicao limpa com espaco negativo, profundidade de campo suave, paleta harmonizando azul-marinho (#1a3270) e detalhes em dourado (#c9a227), clima confiavel e sofisticado. Formato widescreen 16:9, 1200x675px. Sem texto, sem letras, sem numeros, sem logotipos, sem marca d'agua. CENA: Empresário sênior e filhos adultos em reunião com consultor na mesa de uma empresa familiar
+
+
+--- 21/48 ---
+ARQUIVO: public/images/detalhes/reorganizacao-societaria.jpg
+CARD...: Reorganização Societária
+PROMPT.:
+Fotografia corporativa profissional, realista, alta qualidade, luz natural suave, ambiente brasileiro contemporaneo, composicao limpa com espaco negativo, profundidade de campo suave, paleta harmonizando azul-marinho (#1a3270) e detalhes em dourado (#c9a227), clima confiavel e sofisticado. Formato widescreen 16:9, 1200x675px. Sem texto, sem letras, sem numeros, sem logotipos, sem marca d'agua. CENA: Sócios assinando documentos societários com consultor conduzindo a reunião, organograma societário na tela
+
+
+--- 22/48 ---
+ARQUIVO: public/images/detalhes/fusoes.jpg
+CARD...: Aquisições, Fusões, Cisões e Incorporações
+PROMPT.:
+Fotografia corporativa profissional, realista, alta qualidade, luz natural suave, ambiente brasileiro contemporaneo, composicao limpa com espaco negativo, profundidade de campo suave, paleta harmonizando azul-marinho (#1a3270) e detalhes em dourado (#c9a227), clima confiavel e sofisticado. Formato widescreen 16:9, 1200x675px. Sem texto, sem letras, sem numeros, sem logotipos, sem marca d'agua. CENA: Aperto de mãos firme entre executivos selando negociação, equipes dos dois lados desfocadas ao fundo
+
+
+--- 23/48 ---
+ARQUIVO: public/images/detalhes/planejamento-tributario.jpg
+CARD...: Planejamento Tributário
+PROMPT.:
+Fotografia corporativa profissional, realista, alta qualidade, luz natural suave, ambiente brasileiro contemporaneo, composicao limpa com espaco negativo, profundidade de campo suave, paleta harmonizando azul-marinho (#1a3270) e detalhes em dourado (#c9a227), clima confiavel e sofisticado. Formato widescreen 16:9, 1200x675px. Sem texto, sem letras, sem numeros, sem logotipos, sem marca d'agua. CENA: Especialista comparando cenários de carga tributária em duas telas, legislação impressa ao lado
+
+
+--- 24/48 ---
+ARQUIVO: public/images/detalhes/fiscal-exportadoras.jpg
+CARD...: Consultoria Fiscal para Empresas Exportadoras/Importadoras
+PROMPT.:
+Fotografia corporativa profissional, realista, alta qualidade, luz natural suave, ambiente brasileiro contemporaneo, composicao limpa com espaco negativo, profundidade de campo suave, paleta harmonizando azul-marinho (#1a3270) e detalhes em dourado (#c9a227), clima confiavel e sofisticado. Formato widescreen 16:9, 1200x675px. Sem texto, sem letras, sem numeros, sem logotipos, sem marca d'agua. CENA: Profissional com tablet diante de contêineres em pátio portuário, documentos de comércio exterior na mão
+
+
+--- 25/48 ---
+ARQUIVO: public/images/detalhes/consultoria-fiscal.jpg
+CARD...: Consultoria Fiscal
+PROMPT.:
+Fotografia corporativa profissional, realista, alta qualidade, luz natural suave, ambiente brasileiro contemporaneo, composicao limpa com espaco negativo, profundidade de campo suave, paleta harmonizando azul-marinho (#1a3270) e detalhes em dourado (#c9a227), clima confiavel e sofisticado. Formato widescreen 16:9, 1200x675px. Sem texto, sem letras, sem numeros, sem logotipos, sem marca d'agua. CENA: Conferência de notas fiscais e apuração de impostos em tela dupla, checklist de conformidade impresso
+
+
+--- 26/48 ---
+ARQUIVO: public/images/detalhes/recuperacao-tributos.jpg
+CARD...: Revisão e Recuperação de Tributos
+PROMPT.:
+Fotografia corporativa profissional, realista, alta qualidade, luz natural suave, ambiente brasileiro contemporaneo, composicao limpa com espaco negativo, profundidade de campo suave, paleta harmonizando azul-marinho (#1a3270) e detalhes em dourado (#c9a227), clima confiavel e sofisticado. Formato widescreen 16:9, 1200x675px. Sem texto, sem letras, sem numeros, sem logotipos, sem marca d'agua. CENA: Analista revisando declarações fiscais retificadoras e marcando créditos tributários recuperados em relatório
+
+==========================================================================
+SISTEMAS (ERP POR SEGMENTO) — 17 IMAGENS
+==========================================================================
+
+--- 27/48 ---
+ARQUIVO: public/images/detalhes/metalmecanica.jpg
+CARD...: Indústria Metalmecânica
+PROMPT.:
+Fotografia corporativa profissional, realista, alta qualidade, luz natural suave, ambiente brasileiro contemporaneo, composicao limpa com espaco negativo, profundidade de campo suave, paleta harmonizando azul-marinho (#1a3270) e detalhes em dourado (#c9a227), clima confiavel e sofisticado. Formato widescreen 16:9, 1200x675px. Sem texto, sem letras, sem numeros, sem logotipos, sem marca d'agua. CENA: Chão de fábrica metalmecânica com máquina CNC de corte de chapas em operação, operador com EPI acompanhando a produção em terminal industrial
+
+
+--- 28/48 ---
+ARQUIVO: public/images/detalhes/metalurgica.jpg
+CARD...: Indústria Metalúrgica
+PROMPT.:
+Fotografia corporativa profissional, realista, alta qualidade, luz natural suave, ambiente brasileiro contemporaneo, composicao limpa com espaco negativo, profundidade de campo suave, paleta harmonizando azul-marinho (#1a3270) e detalhes em dourado (#c9a227), clima confiavel e sofisticado. Formato widescreen 16:9, 1200x675px. Sem texto, sem letras, sem numeros, sem logotipos, sem marca d'agua. CENA: Interior de metalúrgica com peças metálicas e fundição, faíscas controladas, operador com EPI e supervisor conferindo tablet
+
+
+--- 29/48 ---
+ARQUIVO: public/images/detalhes/alimentos-bebidas.jpg
+CARD...: Indústria de Alimentos e Bebidas
+PROMPT.:
+Fotografia corporativa profissional, realista, alta qualidade, luz natural suave, ambiente brasileiro contemporaneo, composicao limpa com espaco negativo, profundidade de campo suave, paleta harmonizando azul-marinho (#1a3270) e detalhes em dourado (#c9a227), clima confiavel e sofisticado. Formato widescreen 16:9, 1200x675px. Sem texto, sem letras, sem numeros, sem logotipos, sem marca d'agua. CENA: Linha de produção de alimentos em aço inox, esteira com produtos embalados, operadores uniformizados com touca e luvas
+
+
+--- 30/48 ---
+ARQUIVO: public/images/detalhes/quimica-cosmetica.jpg
+CARD...: Indústria Química e Cosmética
+PROMPT.:
+Fotografia corporativa profissional, realista, alta qualidade, luz natural suave, ambiente brasileiro contemporaneo, composicao limpa com espaco negativo, profundidade de campo suave, paleta harmonizando azul-marinho (#1a3270) e detalhes em dourado (#c9a227), clima confiavel e sofisticado. Formato widescreen 16:9, 1200x675px. Sem texto, sem letras, sem numeros, sem logotipos, sem marca d'agua. CENA: Linha de envase de cosméticos com frascos em esteira e técnica de jaleco conferindo qualidade em laboratório limpo
+
+
+--- 31/48 ---
+ARQUIVO: public/images/detalhes/plastico-borracha.jpg
+CARD...: Indústria de Plástico e Borracha
+PROMPT.:
+Fotografia corporativa profissional, realista, alta qualidade, luz natural suave, ambiente brasileiro contemporaneo, composicao limpa com espaco negativo, profundidade de campo suave, paleta harmonizando azul-marinho (#1a3270) e detalhes em dourado (#c9a227), clima confiavel e sofisticado. Formato widescreen 16:9, 1200x675px. Sem texto, sem letras, sem numeros, sem logotipos, sem marca d'agua. CENA: Injetoras plásticas em operação em galpão industrial, caixas de peças recém-produzidas, operador monitorando o processo
+
+
+--- 32/48 ---
+ARQUIVO: public/images/detalhes/aluminio-utilidades.jpg
+CARD...: Indústria de Alumínio e Utilidades Domésticas
+PROMPT.:
+Fotografia corporativa profissional, realista, alta qualidade, luz natural suave, ambiente brasileiro contemporaneo, composicao limpa com espaco negativo, profundidade de campo suave, paleta harmonizando azul-marinho (#1a3270) e detalhes em dourado (#c9a227), clima confiavel e sofisticado. Formato widescreen 16:9, 1200x675px. Sem texto, sem letras, sem numeros, sem logotipos, sem marca d'agua. CENA: Linha de produção de panelas e utilidades de alumínio, peças polidas alinhadas em esteira, operador com EPI
+
+
+--- 33/48 ---
+ARQUIVO: public/images/detalhes/blocos-pavers.jpg
+CARD...: Indústria de Blocos, Pavers e Pré-Moldados
+PROMPT.:
+Fotografia corporativa profissional, realista, alta qualidade, luz natural suave, ambiente brasileiro contemporaneo, composicao limpa com espaco negativo, profundidade de campo suave, paleta harmonizando azul-marinho (#1a3270) e detalhes em dourado (#c9a227), clima confiavel e sofisticado. Formato widescreen 16:9, 1200x675px. Sem texto, sem letras, sem numeros, sem logotipos, sem marca d'agua. CENA: Pátio de fábrica com blocos de concreto e pavers empilhados em paletes, vibro-prensa ao fundo, encarregado com tablet
+
+
+--- 34/48 ---
+ARQUIVO: public/images/detalhes/moveis-madeiras.jpg
+CARD...: Indústria de Móveis e Madeiras
+PROMPT.:
+Fotografia corporativa profissional, realista, alta qualidade, luz natural suave, ambiente brasileiro contemporaneo, composicao limpa com espaco negativo, profundidade de campo suave, paleta harmonizando azul-marinho (#1a3270) e detalhes em dourado (#c9a227), clima confiavel e sofisticado. Formato widescreen 16:9, 1200x675px. Sem texto, sem letras, sem numeros, sem logotipos, sem marca d'agua. CENA: Marcenaria industrial com painéis de MDF sendo cortados em seccionadora, móveis planejados em montagem
+
+
+--- 35/48 ---
+ARQUIVO: public/images/detalhes/atacado-distribuicao.jpg
+CARD...: Atacados e Distribuidores
+PROMPT.:
+Fotografia corporativa profissional, realista, alta qualidade, luz natural suave, ambiente brasileiro contemporaneo, composicao limpa com espaco negativo, profundidade de campo suave, paleta harmonizando azul-marinho (#1a3270) e detalhes em dourado (#c9a227), clima confiavel e sofisticado. Formato widescreen 16:9, 1200x675px. Sem texto, sem letras, sem numeros, sem logotipos, sem marca d'agua. CENA: Centro de distribuição amplo com prateleiras altas, empilhadeira e conferente usando coletor de código de barras
+
+
+--- 36/48 ---
+ARQUIVO: public/images/detalhes/textil-confeccao.jpg
+CARD...: Indústria Têxtil e de Confecção
+PROMPT.:
+Fotografia corporativa profissional, realista, alta qualidade, luz natural suave, ambiente brasileiro contemporaneo, composicao limpa com espaco negativo, profundidade de campo suave, paleta harmonizando azul-marinho (#1a3270) e detalhes em dourado (#c9a227), clima confiavel e sofisticado. Formato widescreen 16:9, 1200x675px. Sem texto, sem letras, sem numeros, sem logotipos, sem marca d'agua. CENA: Linha de costura industrial com costureiras em bancadas, rolos de tecido coloridos e peças em produção
+
+
+--- 37/48 ---
+ARQUIVO: public/images/detalhes/varejo-moda.jpg
+CARD...: Varejo de Moda
+PROMPT.:
+Fotografia corporativa profissional, realista, alta qualidade, luz natural suave, ambiente brasileiro contemporaneo, composicao limpa com espaco negativo, profundidade de campo suave, paleta harmonizando azul-marinho (#1a3270) e detalhes em dourado (#c9a227), clima confiavel e sofisticado. Formato widescreen 16:9, 1200x675px. Sem texto, sem letras, sem numeros, sem logotipos, sem marca d'agua. CENA: Interior de loja de moda contemporânea com araras organizadas, vendedora atendendo cliente e caixa com terminal
+
+
+--- 38/48 ---
+ARQUIVO: public/images/detalhes/lojas-calcados.jpg
+CARD...: Lojas de Calçados
+PROMPT.:
+Fotografia corporativa profissional, realista, alta qualidade, luz natural suave, ambiente brasileiro contemporaneo, composicao limpa com espaco negativo, profundidade de campo suave, paleta harmonizando azul-marinho (#1a3270) e detalhes em dourado (#c9a227), clima confiavel e sofisticado. Formato widescreen 16:9, 1200x675px. Sem texto, sem letras, sem numeros, sem logotipos, sem marca d'agua. CENA: Loja de calçados com prateleiras iluminadas de sapatos e tênis, vendedor atendendo cliente sentado no provador
+
+
+--- 39/48 ---
+ARQUIVO: public/images/detalhes/redes-franquias.jpg
+CARD...: Gestão de Redes de Lojas e Franquias
+PROMPT.:
+Fotografia corporativa profissional, realista, alta qualidade, luz natural suave, ambiente brasileiro contemporaneo, composicao limpa com espaco negativo, profundidade de campo suave, paleta harmonizando azul-marinho (#1a3270) e detalhes em dourado (#c9a227), clima confiavel e sofisticado. Formato widescreen 16:9, 1200x675px. Sem texto, sem letras, sem numeros, sem logotipos, sem marca d'agua. CENA: Corredor de shopping com fachadas de lojas da mesma rede, gerente regional conferindo indicadores em tablet
+
+
+--- 40/48 ---
+ARQUIVO: public/images/detalhes/rfid.jpg
+CARD...: RFID — Etiquetas Inteligentes
+PROMPT.:
+Fotografia corporativa profissional, realista, alta qualidade, luz natural suave, ambiente brasileiro contemporaneo, composicao limpa com espaco negativo, profundidade de campo suave, paleta harmonizando azul-marinho (#1a3270) e detalhes em dourado (#c9a227), clima confiavel e sofisticado. Formato widescreen 16:9, 1200x675px. Sem texto, sem letras, sem numeros, sem logotipos, sem marca d'agua. CENA: Colaborador fazendo inventário com leitor RFID de mão no estoque de uma loja, etiqueta inteligente em destaque na peça de roupa
+
+
+--- 41/48 ---
+ARQUIVO: public/images/detalhes/oticas.jpg
+CARD...: Óticas
+PROMPT.:
+Fotografia corporativa profissional, realista, alta qualidade, luz natural suave, ambiente brasileiro contemporaneo, composicao limpa com espaco negativo, profundidade de campo suave, paleta harmonizando azul-marinho (#1a3270) e detalhes em dourado (#c9a227), clima confiavel e sofisticado. Formato widescreen 16:9, 1200x675px. Sem texto, sem letras, sem numeros, sem logotipos, sem marca d'agua. CENA: Interior de ótica moderna com expositor de armações, optometrista atendendo cliente no balcão
+
+
+--- 42/48 ---
+ARQUIVO: public/images/detalhes/perfumaria-cosmeticos.jpg
+CARD...: Perfumaria e Cosméticos
+PROMPT.:
+Fotografia corporativa profissional, realista, alta qualidade, luz natural suave, ambiente brasileiro contemporaneo, composicao limpa com espaco negativo, profundidade de campo suave, paleta harmonizando azul-marinho (#1a3270) e detalhes em dourado (#c9a227), clima confiavel e sofisticado. Formato widescreen 16:9, 1200x675px. Sem texto, sem letras, sem numeros, sem logotipos, sem marca d'agua. CENA: Loja de perfumaria e cosméticos com gôndolas bem iluminadas, cliente experimentando produto e atendente ao lado
+
+
+--- 43/48 ---
+ARQUIVO: public/images/detalhes/utilidades-presentes.jpg
+CARD...: Utilidades, Presentes e Brinquedos
+PROMPT.:
+Fotografia corporativa profissional, realista, alta qualidade, luz natural suave, ambiente brasileiro contemporaneo, composicao limpa com espaco negativo, profundidade de campo suave, paleta harmonizando azul-marinho (#1a3270) e detalhes em dourado (#c9a227), clima confiavel e sofisticado. Formato widescreen 16:9, 1200x675px. Sem texto, sem letras, sem numeros, sem logotipos, sem marca d'agua. CENA: Loja de utilidades e presentes com prateleiras coloridas de brinquedos e papelaria, cliente escolhendo produto
+
+==========================================================================
+MARCAS & PATENTES — 5 IMAGENS
+==========================================================================
+
+--- 44/48 ---
+ARQUIVO: public/images/detalhes/registro-marcas.jpg
+CARD...: Registro de marcas
+PROMPT.:
+Fotografia corporativa profissional, realista, alta qualidade, luz natural suave, ambiente brasileiro contemporaneo, composicao limpa com espaco negativo, profundidade de campo suave, paleta harmonizando azul-marinho (#1a3270) e detalhes em dourado (#c9a227), clima confiavel e sofisticado. Formato widescreen 16:9, 1200x675px. Sem texto, sem letras, sem numeros, sem logotipos, sem marca d'agua. CENA: Designer e consultor analisando painel de identidade visual e símbolos de marca sobre a mesa, carimbo de registro ao lado (sem texto legível)
+
+
+--- 45/48 ---
+ARQUIVO: public/images/detalhes/registro-patentes.jpg
+CARD...: Registro de patentes
+PROMPT.:
+Fotografia corporativa profissional, realista, alta qualidade, luz natural suave, ambiente brasileiro contemporaneo, composicao limpa com espaco negativo, profundidade de campo suave, paleta harmonizando azul-marinho (#1a3270) e detalhes em dourado (#c9a227), clima confiavel e sofisticado. Formato widescreen 16:9, 1200x675px. Sem texto, sem letras, sem numeros, sem logotipos, sem marca d'agua. CENA: Inventor apresentando protótipo e desenho técnico de engrenagem a um consultor, mesa com esboços de projeto
+
+
+--- 46/48 ---
+ARQUIVO: public/images/detalhes/codigo-barras.jpg
+CARD...: Código de barras
+PROMPT.:
+Fotografia corporativa profissional, realista, alta qualidade, luz natural suave, ambiente brasileiro contemporaneo, composicao limpa com espaco negativo, profundidade de campo suave, paleta harmonizando azul-marinho (#1a3270) e detalhes em dourado (#c9a227), clima confiavel e sofisticado. Formato widescreen 16:9, 1200x675px. Sem texto, sem letras, sem numeros, sem logotipos, sem marca d'agua. CENA: Leitor escaneando código de barras em embalagem de produto na linha de expedição, foco no feixe do leitor
+
+
+--- 47/48 ---
+ARQUIVO: public/images/detalhes/direito-autoral.jpg
+CARD...: Direito autoral
+PROMPT.:
+Fotografia corporativa profissional, realista, alta qualidade, luz natural suave, ambiente brasileiro contemporaneo, composicao limpa com espaco negativo, profundidade de campo suave, paleta harmonizando azul-marinho (#1a3270) e detalhes em dourado (#c9a227), clima confiavel e sofisticado. Formato widescreen 16:9, 1200x675px. Sem texto, sem letras, sem numeros, sem logotipos, sem marca d'agua. CENA: Mesa criativa com livro, partitura, ilustração e câmera, autor organizando sua obra para registro
+
+
+--- 48/48 ---
+ARQUIVO: public/images/detalhes/registro-software.jpg
+CARD...: Registro de software
+PROMPT.:
+Fotografia corporativa profissional, realista, alta qualidade, luz natural suave, ambiente brasileiro contemporaneo, composicao limpa com espaco negativo, profundidade de campo suave, paleta harmonizando azul-marinho (#1a3270) e detalhes em dourado (#c9a227), clima confiavel e sofisticado. Formato widescreen 16:9, 1200x675px. Sem texto, sem letras, sem numeros, sem logotipos, sem marca d'agua. CENA: Desenvolvedor diante de monitor com código-fonte desfocado, documentos de registro de software impressos na mesa

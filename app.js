@@ -105,39 +105,32 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 9000);
   }
 
-  // ── Offices carousel (footer) ──────────────────────────────
+  // ── Offices carousel (footer) ──────────────────────
   const officesCarousel = document.getElementById('offices-carousel');
   const officesTrack = document.getElementById('offices-track');
   if (officesCarousel && officesTrack) {
     const originalCards = Array.from(officesTrack.children);
+
+    // Duplica o conjunto para o loop ficar contínuo (sem "salto" visível)
     originalCards.forEach(card => {
-      officesTrack.appendChild(card.cloneNode(true));
+      const clone = card.cloneNode(true);
+      clone.setAttribute('aria-hidden', 'true');
+      officesTrack.appendChild(clone);
     });
 
-    const gap = parseFloat(getComputedStyle(officesTrack).columnGap || getComputedStyle(officesTrack).gap) || 0;
-    const step = originalCards[0].getBoundingClientRect().width + gap;
-
-    let index = 0;
-    let paused = false;
-
-    const slide = () => {
-      if (paused) return;
-      index++;
-      officesTrack.style.transform = `translateX(-${step * index}px)`;
-      if (index === originalCards.length) {
-        officesTrack.addEventListener('transitionend', () => {
-          officesTrack.style.transition = 'none';
-          officesTrack.style.transform = 'translateX(0px)';
-          officesTrack.getBoundingClientRect();
-          officesTrack.style.transition = '';
-          index = 0;
-        }, { once: true });
+    const SPEED = 40; // pixels por segundo
+    const setDuration = () => {
+      const setWidth = originalCards.reduce((total, card) => {
+        const styles = getComputedStyle(card);
+        return total + card.getBoundingClientRect().width + parseFloat(styles.marginRight || 0);
+      }, 0);
+      if (setWidth > 0) {
+        officesTrack.style.animationDuration = `${setWidth / SPEED}s`;
       }
     };
 
-    setInterval(slide, 3200);
-    officesCarousel.addEventListener('mouseenter', () => { paused = true; });
-    officesCarousel.addEventListener('mouseleave', () => { paused = false; });
+    setDuration();
+    window.addEventListener('resize', setDuration);
   }
 
   // ── Cursor-follow zoom (soluções diagram) ──────────────────

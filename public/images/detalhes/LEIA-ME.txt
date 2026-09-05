@@ -1,0 +1,10 @@
+Pasta das imagens dos cards (modal de detalhe).
+
+Salve cada imagem aqui com o nome exato da chave do card:
+  Ex.: markup.jpg  ->  card "Formação do Preço de Venda — Markup"
+
+Formatos aceitos: .jpg (preferido), .jpeg, .png, .webp
+Proporção: 16:9  |  Tamanho: 1200x675px
+
+A imagem aparece sozinha assim que o arquivo existir — sem mexer em código.
+Lista completa de nomes e prompts: docs/imagens-cards-ia.md

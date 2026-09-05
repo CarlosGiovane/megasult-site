@@ -3,7 +3,24 @@
    Requer window.detailData = { chave: { title, body } } definido
    na página antes deste script, e cards com data-detail-key="chave"
    e classe .detail-card.
+
+   IMAGENS: basta salvar o arquivo em public/images/detalhes/ com o
+   nome da chave do card (ex.: public/images/detalhes/markup.jpg).
+   O modal procura .jpg, .jpeg, .png e .webp nessa ordem e mostra o
+   placeholder "Imagem em breve" enquanto nenhum arquivo existir.
+   Ver docs/imagens-cards-ia.md.
    ============================================================ */
+
+/* Pasta única das imagens dos cards, resolvida a partir do caminho
+   deste script — funciona em qualquer página e em qualquer subpasta
+   de publicação (GitHub Pages de projeto, domínio próprio etc.). */
+var DETAIL_IMG_DIR = (function () {
+  var src = document.currentScript ? document.currentScript.src : "";
+  var base = src ? src.replace(/[^/]*$/, "") : "";
+  return base + "public/images/detalhes/";
+})();
+var DETAIL_IMG_EXTS = [".jpg", ".jpeg", ".png", ".webp"];
+
 document.addEventListener("DOMContentLoaded", function () {
   const data = window.detailData;
   const cards = document.querySelectorAll("[data-detail-key]");
@@ -43,16 +60,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
     imgEl.style.display = "none";
     placeholderEl.style.display = "flex";
+    imgEl.alt = item.title;
+
+    // Tenta cada extensão até achar o arquivo; se nenhuma existir,
+    // mantém o placeholder "Imagem em breve".
+    var attempt = 0;
     imgEl.onload = function () {
       placeholderEl.style.display = "none";
       imgEl.style.display = "block";
     };
     imgEl.onerror = function () {
+      attempt++;
+      if (attempt < DETAIL_IMG_EXTS.length) {
+        imgEl.src = DETAIL_IMG_DIR + key + DETAIL_IMG_EXTS[attempt];
+        return;
+      }
+      imgEl.removeAttribute("src");
       imgEl.style.display = "none";
       placeholderEl.style.display = "flex";
     };
-    imgEl.alt = item.title;
-    imgEl.src = "detail-images/" + key + ".jpg";
+    imgEl.src = DETAIL_IMG_DIR + key + DETAIL_IMG_EXTS[0];
 
     modal.classList.add("open");
     document.body.style.overflow = "hidden";

@@ -997,6 +997,98 @@ section {
   font-weight: 700;
 }
 
+/* ── Prêmios e certificações (sobre) ────────────────────────── */
+.premios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.75rem;
+}
+.premio-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition:
+    transform 0.25s,
+    box-shadow 0.25s;
+}
+.premio-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+.premio-img {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--off);
+}
+.premio-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+.premio-card:hover .premio-img img {
+  transform: scale(1.05);
+}
+.premio-year {
+  position: absolute;
+  top: 0.85rem;
+  left: 0.85rem;
+  background: var(--grad-gold);
+  color: var(--navy);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  box-shadow: 0 4px 14px rgba(26, 50, 112, 0.25);
+}
+.premio-body {
+  padding: 1.35rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  flex: 1;
+}
+.premio-body h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.45;
+}
+.premio-meta {
+  margin-top: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+.premio-local {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+.premio-local svg {
+  width: 15px;
+  height: 15px;
+  color: var(--gold);
+  flex-shrink: 0;
+}
+.premio-date {
+  font-weight: 600;
+  color: var(--navy);
+}
+
 /* ── Division page hero ─────────────────────────────────────── */
 .div-hero {
   padding: calc(72px + 5rem) 2rem 5rem;
@@ -2462,17 +2554,33 @@ section {
 }
 .offices-grid {
   display: flex;
-  gap: 1rem;
+  width: max-content;
   padding-bottom: 0.75rem;
-  transition: transform 0.6s ease;
+  animation: offices-marquee 60s linear infinite;
   will-change: transform;
 }
 .offices-carousel:hover .offices-grid {
-  transition-duration: 0.3s;
+  animation-play-state: paused;
+}
+@keyframes offices-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .offices-grid {
+    animation: none;
+  }
+  .offices-carousel {
+    overflow-x: auto;
+  }
 }
 .office {
   flex: 0 0 208px;
-  scroll-snap-align: start;
+  margin-right: 1rem;
   font-size: 0.8rem;
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.08);
