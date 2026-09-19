@@ -2136,6 +2136,11 @@ section {
   scrollbar-width: thin;
   scrollbar-color: rgba(26, 50, 112, 0.25) transparent;
 }
+/* Sistemas: modal mais largo, mais proporcional às imagens 16:9 dos
+   segmentos (1200x675) — escopado só a esta página via .page-sistemas. */
+.page-sistemas .modal-box.detail-modal-box {
+  max-width: 860px;
+}
 .detail-modal-box .modal-x {
   z-index: 2;
 }
