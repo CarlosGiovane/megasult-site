@@ -52,11 +52,14 @@ document.addEventListener("DOMContentLoaded", function () {
   const imgEl = document.getElementById("cardDetailImg");
   const placeholderEl = document.getElementById("cardDetailPlaceholder");
 
-  function openDetail(key) {
+  function openDetail(key, wide) {
     const item = data[key];
     if (!item) return;
     titleEl.textContent = item.title;
     bodyEl.innerHTML = item.body;
+    modal
+      .querySelector(".detail-modal-box")
+      .classList.toggle("detail-modal-box--wide", !!wide);
 
     imgEl.style.display = "none";
     placeholderEl.style.display = "flex";
@@ -93,12 +96,18 @@ document.addEventListener("DOMContentLoaded", function () {
     card.setAttribute("tabindex", "0");
     card.setAttribute("role", "button");
     card.addEventListener("click", function () {
-      openDetail(card.getAttribute("data-detail-key"));
+      openDetail(
+        card.getAttribute("data-detail-key"),
+        card.hasAttribute("data-detail-wide")
+      );
     });
     card.addEventListener("keydown", function (e) {
       if (e.key === "Enter" || e.key === " ") {
         e.preventDefault();
-        openDetail(card.getAttribute("data-detail-key"));
+        openDetail(
+          card.getAttribute("data-detail-key"),
+          card.hasAttribute("data-detail-wide")
+        );
       }
     });
   });

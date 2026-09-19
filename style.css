@@ -2141,6 +2141,11 @@ section {
 .page-sistemas .modal-box.detail-modal-box {
   max-width: 860px;
 }
+/* Cards com data-detail-wide (tab "ERP — Indústria e Distribuição") ficam
+   ainda mais largos que o padrão de Sistemas. */
+.page-sistemas .modal-box.detail-modal-box.detail-modal-box--wide {
+  max-width: 980px;
+}
 .detail-modal-box .modal-x {
   z-index: 2;
 }
