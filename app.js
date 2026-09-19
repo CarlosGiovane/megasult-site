@@ -76,12 +76,21 @@ document.addEventListener('DOMContentLoaded', () => {
       indicator.style.transform = `translateX(${btn.offsetLeft}px)`;
     };
 
+    const diagramTargets = document.querySelectorAll('[data-show-on-tab]');
+    const syncDiagram = (idx) => {
+      diagramTargets.forEach(el => {
+        el.classList.toggle('tab-hidden', Number(el.dataset.showOnTab) !== idx);
+      });
+    };
+
     const activateTab = (idx) => {
       tabBtns.forEach((b, i) => b.classList.toggle('active', i === idx));
       tabPanes.forEach((p, i) => p.classList.toggle('active', i === idx));
       moveIndicator(idx);
+      syncDiagram(idx);
       current = idx;
     };
+    syncDiagram(current);
 
     tabBtns.forEach((btn, idx) => {
       btn.addEventListener('click', () => {

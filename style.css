@@ -1840,6 +1840,11 @@ section {
 .solucoes-diagram:hover img {
   transform: scale(2.4);
 }
+/* Some/reaparece junto com a troca de aba (Sistemas): o diagrama só faz
+   sentido na aba "ERP — Indústria e Distribuição". */
+.tab-hidden {
+  display: none !important;
+}
 @media (max-width: 900px) {
   .solucoes-intro {
     flex-direction: column;
