@@ -111,6 +111,44 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 9000);
   }
 
+  // ── Diagrama do ERP (Sistemas): abre em modal grande ────────
+  const diagramCard = document.getElementById('diagramCardBtn');
+  if (diagramCard) {
+    if (!document.getElementById('diagramModal')) {
+      document.body.insertAdjacentHTML(
+        'beforeend',
+        '<div class="modal-overlay" id="diagramModal" role="dialog" aria-modal="true" aria-labelledby="diagramModalTitle">' +
+          '<div class="modal-box diagram-modal-box">' +
+            '<button class="modal-x" id="diagramModalCloseBtn" aria-label="Fechar">&times;</button>' +
+            '<h3 id="diagramModalTitle" class="sr-only">Diagrama dos módulos do ERP Megasult</h3>' +
+            '<img src="' + diagramCard.querySelector('img').src + '" alt="' + diagramCard.querySelector('img').alt + '" />' +
+          '</div>' +
+        '</div>'
+      );
+    }
+
+    const diagramModal = document.getElementById('diagramModal');
+    const diagramCloseBtn = document.getElementById('diagramModalCloseBtn');
+
+    const openDiagramModal = () => {
+      diagramModal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    };
+    const closeDiagramModal = () => {
+      diagramModal.classList.remove('open');
+      document.body.style.overflow = '';
+    };
+
+    diagramCard.addEventListener('click', openDiagramModal);
+    diagramCloseBtn.addEventListener('click', closeDiagramModal);
+    diagramModal.addEventListener('click', (e) => {
+      if (e.target === diagramModal) closeDiagramModal();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeDiagramModal();
+    });
+  }
+
   // ── Offices carousel (footer) ──────────────────────
   const officesCarousel = document.getElementById('offices-carousel');
   const officesTrack = document.getElementById('offices-track');
