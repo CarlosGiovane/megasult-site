@@ -67,6 +67,12 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.segment-card').forEach(card => {
       card.addEventListener('mouseenter', () => { cardHovered = true; });
       card.addEventListener('mouseleave', () => { cardHovered = false; });
+      // Ao abrir o modal de detalhe de qualquer card, para de vez a troca
+      // automática de abas (não é só uma pausa por hover).
+      card.addEventListener('click', () => {
+        userInteracted = true;
+        clearInterval(autoInterval);
+      });
     });
 
     const moveIndicator = (idx) => {
@@ -76,21 +82,12 @@ document.addEventListener('DOMContentLoaded', () => {
       indicator.style.transform = `translateX(${btn.offsetLeft}px)`;
     };
 
-    const diagramTargets = document.querySelectorAll('[data-show-on-tab]');
-    const syncDiagram = (idx) => {
-      diagramTargets.forEach(el => {
-        el.classList.toggle('tab-hidden', Number(el.dataset.showOnTab) !== idx);
-      });
-    };
-
     const activateTab = (idx) => {
       tabBtns.forEach((b, i) => b.classList.toggle('active', i === idx));
       tabPanes.forEach((p, i) => p.classList.toggle('active', i === idx));
       moveIndicator(idx);
-      syncDiagram(idx);
       current = idx;
     };
-    syncDiagram(current);
 
     tabBtns.forEach((btn, idx) => {
       btn.addEventListener('click', () => {

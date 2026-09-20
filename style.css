@@ -1818,12 +1818,20 @@ section {
   border-bottom: 2px solid var(--border);
 }
 
-.solucoes-intro {
+/* Diagrama circular + grade de cards lado a lado — só existe dentro da
+   aba "ERP — Indústria e Distribuição" (o diagrama não faz sentido na
+   aba de varejo, então não é compartilhado entre as duas). */
+.segments-layout {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-  margin-bottom: 3rem;
+  align-items: flex-start;
+  gap: 2.5rem;
+}
+.segments-layout .segments-grid {
+  flex: 1;
+  min-width: 0;
+  /* 2 colunas em vez de 3 — sobra espaço pro diagrama sem espremer os
+     cards (título + texto + 6 bullets cabem melhor). */
+  grid-template-columns: repeat(2, 1fr);
 }
 .solucoes-diagram {
   flex: 0 0 auto;
@@ -1833,25 +1841,20 @@ section {
 }
 .solucoes-diagram img {
   width: 100%;
-  max-width: 560px;
+  max-width: 260px;
   transition: transform 0.25s ease;
   transform-origin: center;
 }
 .solucoes-diagram:hover img {
   transform: scale(2.4);
 }
-/* Some/reaparece junto com a troca de aba (Sistemas): o diagrama só faz
-   sentido na aba "ERP — Indústria e Distribuição". */
-.tab-hidden {
-  display: none !important;
-}
 @media (max-width: 900px) {
-  .solucoes-intro {
+  .segments-layout {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
   }
-  .solucoes-diagram {
-    align-self: center;
+  .segments-layout .segments-grid {
+    width: 100%;
   }
 }
 
@@ -1988,7 +1991,8 @@ section {
   }
 }
 @media (max-width: 560px) {
-  .segments-grid {
+  .segments-grid,
+  .segments-layout .segments-grid {
     grid-template-columns: 1fr;
   }
 }
