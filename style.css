@@ -1829,46 +1829,22 @@ section {
   border-bottom: 2px solid var(--border);
 }
 
-/* Diagrama circular + grade de cards lado a lado — só existe dentro da
-   aba "ERP — Indústria e Distribuição" (o diagrama não faz sentido na
-   aba de varejo, então não é compartilhado entre as duas). */
-.segments-layout {
-  display: flex;
-  align-items: flex-start;
-  gap: 2.5rem;
-}
-.segments-layout .segments-grid {
-  flex: 1;
-  min-width: 0;
-  /* 2 colunas em vez de 3 — sobra espaço pro diagrama sem espremer os
-     cards (título + texto + 6 bullets cabem melhor). */
-  grid-template-columns: repeat(2, 1fr);
-}
+/* Card do diagrama — é mais um item dentro do mesmo .segments-grid da
+   aba "ERP — Indústria e Distribuição", herda de .segment-card/.detail-card
+   o mesmo tamanho, fundo, borda e hover dos outros cards do grid; aqui só
+   ajusta o conteúdo interno (imagem + rótulo centralizados). */
 .diagram-card {
-  flex: 0 0 auto;
-  width: 180px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.75rem;
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 1.25rem 1rem;
-  cursor: pointer;
+  justify-content: center;
+  text-align: center;
+  gap: 1rem;
   font: inherit;
-  transition:
-    transform 0.25s,
-    box-shadow 0.25s;
-}
-.diagram-card:hover,
-.diagram-card:focus-visible {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
-  outline: none;
 }
 .diagram-card img {
   width: 100%;
+  max-width: 200px;
   border-radius: 50%;
   pointer-events: none;
 }
@@ -1876,7 +1852,7 @@ section {
   display: flex;
   align-items: center;
   gap: 0.35rem;
-  font-size: 0.78rem;
+  font-size: 0.85rem;
   font-weight: 700;
   color: var(--blue);
   text-align: center;
@@ -1887,15 +1863,6 @@ section {
   height: 14px;
   color: var(--gold);
   flex-shrink: 0;
-}
-@media (max-width: 900px) {
-  .segments-layout {
-    flex-direction: column;
-    align-items: center;
-  }
-  .segments-layout .segments-grid {
-    width: 100%;
-  }
 }
 
 /* Modal do diagrama — mostra a imagem grande para dar pra ler os módulos */
@@ -2059,8 +2026,7 @@ section {
   }
 }
 @media (max-width: 560px) {
-  .segments-grid,
-  .segments-layout .segments-grid {
+  .segments-grid {
     grid-template-columns: 1fr;
   }
 }
