@@ -74,7 +74,7 @@ window.detailData = {
   "reorganizacao-societaria": {
     title: "Reorganização Societária",
     body:
-      "<p>Serviços especializados em estruturação e reorganização societária, transformação de empresas e adequação de tipos jurídicos, abrangendo Sociedades Limitadas, EIRELI, Sociedades Anônimas, Holdings e SPEs.</p>",
+      "<p>Serviços especializados em estruturação e reorganização societária, transformação de empresas e adequação de tipos jurídicos, abrangendo Sociedades Limitadas, Sociedades Anônimas, Holdings e SPEs.</p>",
   },
   fusoes: {
     title: "Aquisições, Fusões, Cisões e Incorporações",

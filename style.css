@@ -277,13 +277,15 @@ section {
   padding: 0 2rem;
 }
 .nav-logo img {
-  height: 36px;
+  height: 40px;
   width: auto;
-  filter: brightness(0) invert(1);
-  transition: filter 0.3s;
 }
-#navbar.scrolled .nav-logo img {
-  filter: none;
+.nav-logo .logo-on-light,
+#navbar.scrolled .nav-logo .logo-on-dark {
+  display: none;
+}
+#navbar.scrolled .nav-logo .logo-on-light {
+  display: block;
 }
 .nav-links {
   display: flex;
@@ -1329,27 +1331,23 @@ section {
 }
 .hero-v2a-photo-img {
   position: relative;
-  border-radius: 1.5rem;
-  overflow: hidden;
-  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.45);
 }
 .hero-v2a-photo-img img {
   display: block;
   width: 100%;
-  height: 460px;
-  object-fit: cover;
+  height: auto;
   opacity: 0.9;
-  /* filter: saturate(0.9); */
-  transform: scale(1.08);
+  -webkit-mask-image: radial-gradient(ellipse 70% 70% at 50% 50%, #000 55%, transparent 100%);
+  mask-image: radial-gradient(ellipse 70% 70% at 50% 50%, #000 55%, transparent 100%);
   animation: heroPhotoFloatSubtle 7s ease-in-out infinite;
 }
 @keyframes heroPhotoFloatSubtle {
   0%,
   100% {
-    transform: scale(1.08) translateY(0) translateX(0);
+    transform: translateY(0) translateX(0);
   }
   50% {
-    transform: scale(1.08) translateY(-5px) translateX(2px);
+    transform: translateY(-5px) translateX(2px);
   }
 }
 @keyframes heroPhotoFloat {
@@ -1368,7 +1366,7 @@ section {
   }
 }
 .hero-v2a-photo-img::after {
-  content: "";
+  content: none;
   position: absolute;
   inset: 0;
   background: linear-gradient(
@@ -1381,29 +1379,36 @@ section {
 }
 .hero-v2a-stats {
   position: absolute;
-  left: 1rem;
-  bottom: 1rem;
+  left: 1.5rem;
+  bottom: 2.5rem;
+  z-index: 2;
   display: flex;
   gap: 1.1rem;
-  padding: 0.6rem 0.9rem;
-  border-radius: 0.7rem;
-  background: rgba(6, 20, 57, 0.55);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(4px);
+  padding: 0.85rem 1.2rem;
+  border-radius: 0.9rem;
+  background: rgba(6, 20, 57, 0.8);
+  border: 1px solid rgba(230, 201, 74, 0.45);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45), 0 0 24px rgba(201, 162, 39, 0.2);
+  backdrop-filter: blur(6px);
 }
 .hero-v2a-stats div {
   display: flex;
   flex-direction: column;
-  gap: 1px;
+  gap: 2px;
 }
 .hero-v2a-stats .num {
-  color: rgba(255, 255, 255, 0.85);
-  font-size: 1rem;
-  font-weight: 700;
+  background: var(--grad-gold);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 1.75rem;
+  font-weight: 800;
+  line-height: 1;
 }
 .hero-v2a-stats .lbl {
-  color: #8fa4cc;
-  font-size: 0.65rem;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.75rem;
+  font-weight: 500;
 }
 .hero-v2a-cards {
   position: relative;
@@ -1806,6 +1811,9 @@ section {
   font-weight: 700;
   color: var(--navy);
   margin-bottom: 0.4rem;
+}
+.service-body .seg-bullets {
+  margin-top: 0.6rem;
 }
 .service-body p {
   font-size: 0.875rem;
@@ -2508,7 +2516,7 @@ section {
 .footer {
   background: var(--navy);
   color: rgba(255, 255, 255, 0.6);
-  padding: 4rem 2rem 2rem;
+  padding: 2.5rem 2rem 2rem;
 }
 .footer-grid {
   max-width: 1280px;
@@ -2516,6 +2524,26 @@ section {
   display: grid;
   grid-template-columns: 1.5fr 1fr 1fr;
   gap: 3rem 2rem;
+}
+.footer-certs {
+  grid-column: 1 / -1;
+  margin-top: -1.5rem;
+  text-align: center;
+}
+.footer-seals {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.25rem;
+}
+.footer-seals img {
+  width: 150px;
+  height: 120px;
+  object-fit: contain;
+  padding: 0.5rem;
+  background: #fff;
+  border-radius: 0.7rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
 }
 .footer-grid > div {
   min-width: 0;
@@ -2534,15 +2562,14 @@ section {
 
 .footer-offices {
   max-width: 1280px;
-  margin: 3rem auto 0;
-  padding-top: 2.5rem;
+  margin: 2rem auto 0;
+  padding-top: 2rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .footer-brand .footer-logo {
-  height: 30px;
+  height: 36px;
   width: auto;
-  filter: brightness(0) invert(1);
   margin-bottom: 1rem;
 }
 .footer-tagline {
@@ -3000,5 +3027,202 @@ section {
 @media (max-width: 480px) {
   .demo-float span {
     display: none;
+  }
+}
+
+/* Consultoria: area tabs */
+.area-tab {
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border-color 0.25s, box-shadow 0.25s, transform 0.25s;
+}
+.area-tab:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(10, 30, 80, 0.12);
+}
+.area-tab.active {
+  border-color: var(--gold);
+  box-shadow: 0 12px 30px rgba(201, 162, 39, 0.2);
+}
+.area-tab:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+.service-group[hidden] {
+  display: none;
+}
+
+/* Sobre: frase no lugar dos números */
+.stats-phrase {
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+  color: #fff;
+  font-family: var(--font-display, inherit);
+  font-size: clamp(1.4rem, 3vw, 2.2rem);
+  font-weight: 700;
+  line-height: 1.3;
+}
+.stats-phrase strong {
+  color: var(--gold-light);
+}
+
+/* Prêmios: sem foto/data, com ícone */
+.premios-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.25rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.premio-card {
+  flex: 1 1 320px;
+  max-width: 350px;
+  padding: 1.25rem 1.4rem;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.1rem;
+  border-left: 4px solid var(--gold);
+}
+.premio-ico {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--grad-gold);
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(201, 162, 39, 0.35);
+}
+.premio-ico svg {
+  width: 26px;
+  height: 26px;
+}
+.premio-card .premio-body {
+  padding: 0;
+  gap: 0.3rem;
+}
+.premio-tag {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.premio-card .premio-body h3 {
+  font-size: 1.02rem;
+  line-height: 1.35;
+  color: var(--navy);
+}
+
+/* ── Canal de Ética ─────────────────────────────────────── */
+.etica-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 3rem;
+  align-items: start;
+}
+.etica-intro .sec-title {
+  font-size: clamp(1.5rem, 2.6vw, 2rem);
+  margin: 0.5rem 0 1rem;
+}
+.etica-bullets {
+  margin-top: 1.5rem;
+}
+.etica-bullets li {
+  font-size: 0.95rem;
+}
+.etica-form {
+  background: linear-gradient(160deg, var(--navy) 0%, #1f4a8a 100%);
+  color: #fff;
+  border-radius: 1.25rem;
+  padding: 2rem;
+  box-shadow: 0 24px 60px rgba(6, 20, 57, 0.25);
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+.etica-group,
+.etica-ident {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+.etica-form [hidden] {
+  display: none !important;
+}
+.etica-perfil,
+.etica-inline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 1.4rem;
+}
+.etica-perfil {
+  padding-bottom: 0.9rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+.etica-perfil label,
+.etica-inline label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+.etica-form input[type="radio"] {
+  accent-color: var(--gold-light);
+  width: 17px;
+  height: 17px;
+}
+.etica-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+.etica-field > span {
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+.etica-field small {
+  font-weight: 400;
+  opacity: 0.75;
+}
+.etica-form input[type="text"],
+.etica-form select,
+.etica-form textarea {
+  width: 100%;
+  font: inherit;
+  font-size: 0.9rem;
+  padding: 0.8rem 0.95rem;
+  border: 1px solid transparent;
+  border-radius: 0.6rem;
+  background: #fff;
+  color: var(--navy);
+}
+.etica-form textarea {
+  resize: vertical;
+}
+.etica-form input:focus,
+.etica-form select:focus,
+.etica-form textarea:focus {
+  outline: none;
+  border-color: var(--gold-light);
+  box-shadow: 0 0 0 3px rgba(230, 201, 74, 0.35);
+}
+.etica-submit {
+  justify-content: center;
+  width: 100%;
+  margin-top: 0.4rem;
+  border: 0;
+  cursor: pointer;
+}
+@media (max-width: 900px) {
+  .etica-grid {
+    grid-template-columns: 1fr;
+  }
+  .etica-form {
+    padding: 1.5rem;
   }
 }
