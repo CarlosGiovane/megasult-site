@@ -419,7 +419,7 @@ section {
   content: "";
   position: absolute;
   inset: -24px;
-  background: url("public/images/fundo.jpeg") center / cover no-repeat;
+  background: url("public/images/fundo.webp") center / cover no-repeat;
   /* filter: blur(1px); */
   opacity: 0.45;
   pointer-events: none;
@@ -1115,7 +1115,7 @@ section {
   content: "";
   position: absolute;
   inset: -24px;
-  background: url("public/images/fundo.jpeg") center / cover no-repeat;
+  background: url("public/images/fundo.webp") center / cover no-repeat;
   opacity: 0.45;
   pointer-events: none;
 }
@@ -1252,7 +1252,7 @@ section {
   content: "";
   position: absolute;
   inset: -24px;
-  background: url("public/images/fundo.jpeg") center / cover no-repeat;
+  background: url("public/images/fundo.webp") center / cover no-repeat;
   opacity: 0.45;
   pointer-events: none;
 }
@@ -2298,7 +2298,7 @@ section {
   content: "";
   position: absolute;
   inset: 0;
-  background: url("public/images/fundo-branco.png") center / cover no-repeat;
+  background: url("public/images/fundo-branco.webp") center / cover no-repeat;
   pointer-events: none;
 }
 .sec-bg-white-tex > .container {
@@ -2319,7 +2319,7 @@ section {
   content: "";
   position: absolute;
   inset: -24px;
-  background: url("public/images/fundo.jpeg") center / cover no-repeat;
+  background: url("public/images/fundo.webp") center / cover no-repeat;
   opacity: 0.45;
   pointer-events: none;
 }
