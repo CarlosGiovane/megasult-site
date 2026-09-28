@@ -1207,16 +1207,16 @@ section {
 }
 .div-hero-img {
   position: relative;
-  border-radius: 1.25rem;
-  overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.45);
   opacity: 0;
   animation: heroCardIn 0.7s ease 0.25s forwards;
 }
 .div-hero-img img {
+  display: block;
   width: 100%;
   height: auto;
+  opacity: 0.9;
+  -webkit-mask-image: radial-gradient(ellipse 70% 70% at 50% 50%, #000 55%, transparent 100%);
+  mask-image: radial-gradient(ellipse 70% 70% at 50% 50%, #000 55%, transparent 100%);
 }
 @media (max-width: 900px) {
   .div-hero.split {
