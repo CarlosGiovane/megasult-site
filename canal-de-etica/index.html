@@ -116,9 +116,17 @@
 
         <form class="etica-form reveal" id="etica-form" novalidate>
           <div class="etica-perfil" role="radiogroup" aria-label="Perfil">
-            <label><input type="radio" name="perfil" value="Colaborador" checked /> Sou colaborador</label>
-            <label><input type="radio" name="perfil" value="Cliente" /> Sou cliente</label>
-            <label><input type="radio" name="perfil" value="Outros" /> Outros</label>
+            <label
+              ><input type="radio" name="perfil" value="Colaborador" checked />
+              Sou colaborador</label
+            >
+            <label
+              ><input type="radio" name="perfil" value="Cliente" /> Sou
+              cliente</label
+            >
+            <label
+              ><input type="radio" name="perfil" value="Outros" /> Outros</label
+            >
           </div>
 
           <!-- Colaborador -->
@@ -135,8 +143,15 @@
               </select>
             </label>
             <label class="etica-field">
-              <span>Em que área da companhia essa situação ocorre ou ocorreu?</span>
-              <input type="text" name="area" placeholder="Escreva aqui" required />
+              <span
+                >Em que área da companhia essa situação ocorre ou ocorreu?</span
+              >
+              <input
+                type="text"
+                name="area"
+                placeholder="Escreva aqui"
+                required
+              />
             </label>
             <label class="etica-field">
               <span>Com que frequência essa situação ocorre?</span>
@@ -149,22 +164,44 @@
             </label>
             <label class="etica-field">
               <span>Descrição detalhada do ocorrido</span>
-              <textarea name="descricao" rows="5" placeholder="Conte com o máximo de detalhes o que aconteceu, incluindo datas." required></textarea>
+              <textarea
+                name="descricao"
+                rows="5"
+                placeholder="Conte com o máximo de detalhes o que aconteceu, incluindo datas."
+                required
+              ></textarea>
             </label>
             <div class="etica-field">
               <span>Você tem evidências sobre a situação relatada?</span>
               <div class="etica-inline">
-                <label><input type="radio" name="evidencias" value="Sim" /> Sim</label>
-                <label><input type="radio" name="evidencias" value="Não" checked /> Não</label>
+                <label
+                  ><input type="radio" name="evidencias" value="Sim" />
+                  Sim</label
+                >
+                <label
+                  ><input type="radio" name="evidencias" value="Não" checked />
+                  Não</label
+                >
               </div>
             </div>
             <label class="etica-field" data-show-if="evidencias" hidden>
               <span>Descreva as evidências</span>
-              <textarea name="evidencias_desc" rows="3" placeholder="Documentos, mensagens, testemunhas..."></textarea>
+              <textarea
+                name="evidencias_desc"
+                rows="3"
+                placeholder="Documentos, mensagens, testemunhas..."
+              ></textarea>
             </label>
             <label class="etica-field">
-              <span>Você gostaria de apresentar alguma sugestão de resolução para essa situação?</span>
-              <textarea name="sugestao" rows="4" placeholder="Escreva aqui"></textarea>
+              <span
+                >Você gostaria de apresentar alguma sugestão de resolução para
+                essa situação?</span
+              >
+              <textarea
+                name="sugestao"
+                rows="4"
+                placeholder="Escreva aqui"
+              ></textarea>
             </label>
           </div>
 
@@ -183,23 +220,49 @@
             </label>
             <label class="etica-field">
               <span>Assunto do relato</span>
-              <input type="text" name="assunto" placeholder="Escreva um título breve que resuma a situação." required />
+              <input
+                type="text"
+                name="assunto"
+                placeholder="Escreva um título breve que resuma a situação."
+                required
+              />
             </label>
             <label class="etica-field">
               <span>Descrição detalhada do ocorrido</span>
-              <textarea name="descricao" rows="5" placeholder="Conte com o máximo de detalhes o que aconteceu, incluindo datas, locais e pessoas envolvidas (se souber)." required></textarea>
+              <textarea
+                name="descricao"
+                rows="5"
+                placeholder="Conte com o máximo de detalhes o que aconteceu, incluindo datas, locais e pessoas envolvidas (se souber)."
+                required
+              ></textarea>
             </label>
             <label class="etica-field">
               <span>Empresa, setor ou serviço relacionado</span>
-              <input type="text" name="setor" placeholder="Informe qual empresa, unidade ou serviço está relacionado à ocorrência." required />
+              <input
+                type="text"
+                name="setor"
+                placeholder="Informe qual empresa, unidade ou serviço está relacionado à ocorrência."
+                required
+              />
             </label>
           </div>
 
           <div class="etica-field">
-            <span>Deseja se identificar? <small>Mesmo assim, sua identidade continuará preservada.</small></span>
+            <span
+              >Deseja se identificar?
+              <small
+                >Mesmo assim, sua identidade continuará preservada.</small
+              ></span
+            >
             <div class="etica-inline">
-              <label><input type="radio" name="identificar" value="Sim" /> Sim</label>
-              <label><input type="radio" name="identificar" value="Não" checked /> Não</label>
+              <label
+                ><input type="radio" name="identificar" value="Sim" />
+                Sim</label
+              >
+              <label
+                ><input type="radio" name="identificar" value="Não" checked />
+                Não</label
+              >
             </div>
           </div>
           <div class="etica-ident" data-show-if="identificar" hidden>
@@ -209,11 +272,17 @@
             </label>
             <label class="etica-field">
               <span>E-mail ou telefone para contato (opcional)</span>
-              <input type="text" name="contato" placeholder="Como podemos falar com você" />
+              <input
+                type="text"
+                name="contato"
+                placeholder="Como podemos falar com você"
+              />
             </label>
           </div>
 
-          <button type="submit" class="btn-gold etica-submit">Enviar relato</button>
+          <button type="submit" class="btn-gold etica-submit">
+            Enviar relato
+          </button>
         </form>
       </div>
     </section>
@@ -556,8 +625,11 @@
         var groups = form.querySelectorAll(".etica-group");
 
         function val(name) {
-          var el = form.querySelector('[name="' + name + '"]:checked') ||
-            form.querySelector('[name="' + name + '"]:not([type=radio]):not(:disabled)');
+          var el =
+            form.querySelector('[name="' + name + '"]:checked') ||
+            form.querySelector(
+              '[name="' + name + '"]:not([type=radio]):not(:disabled)',
+            );
           return el ? el.value.trim() : "";
         }
 
@@ -566,12 +638,14 @@
           groups.forEach(function (g) {
             var on = g.dataset.perfil.split(" ").indexOf(perfil) > -1;
             g.hidden = !on;
-            g.querySelectorAll("input, select, textarea").forEach(function (el) {
-              var only = el.closest("[data-only]");
-              var active = on && (!only || only.dataset.only === perfil);
-              if (only) only.hidden = !active;
-              el.disabled = !active;
-            });
+            g.querySelectorAll("input, select, textarea").forEach(
+              function (el) {
+                var only = el.closest("[data-only]");
+                var active = on && (!only || only.dataset.only === perfil);
+                if (only) only.hidden = !active;
+                el.disabled = !active;
+              },
+            );
           });
           form.querySelectorAll("[data-show-if]").forEach(function (box) {
             var show = val(box.dataset.showIf) === "Sim";
@@ -594,11 +668,18 @@
           }
           var perfil = val("perfil");
           var group = form.querySelector(".etica-group:not([hidden])");
-          var linhas = ["CANAL DE ÉTICA — NOVO RELATO", "", "Perfil: " + perfil, ""];
+          var linhas = [
+            "CANAL DE ÉTICA — NOVO RELATO",
+            "",
+            "Perfil: " + perfil,
+            "",
+          ];
           group.querySelectorAll(".etica-field").forEach(function (f) {
             if (f.hidden) return;
             var lbl = f.querySelector("span").textContent.trim();
-            var el = f.querySelector("input:checked, select, textarea, input[type=text]");
+            var el = f.querySelector(
+              "input:checked, select, textarea, input[type=text]",
+            );
             if (el && !el.disabled && el.value.trim())
               linhas.push(lbl + "\n" + el.value.trim() + "\n");
           });
@@ -613,11 +694,14 @@
           btn.disabled = true;
           btn.textContent = "Enviando...";
           emailjs
-            .send("service_8wa9d2d", "template_auvix", {
-              to_email: "carlos@megasult.com.br",
+            .send("service_mega", "template_auvix", {
+              to_email: "ouvidoria@megasult.com.br",
               name: nome || "Relato anônimo — Canal de Ética",
               company: "Canal de Ética (" + perfil + ")",
-              email: contato.indexOf("@") > -1 ? contato : "carlos@megasult.com.br",
+              email:
+                contato.indexOf("@") > -1
+                  ? contato
+                  : "ouvidoria@megasult.com.br",
               phone: contato && contato.indexOf("@") === -1 ? contato : "-",
               message: linhas.join("\n"),
             })

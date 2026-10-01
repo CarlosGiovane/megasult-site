@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
         '<h3 id="contactModalTitle">Fale Conosco</h3>' +
         "<p>Preencha o formulário e nossa equipe entrará em contato com você.</p>" +
         '<form class="contact-form" id="contact-form">' +
-        '<input type="hidden" name="to_email" value="carlos@megasult.com.br" />' +
+        '<input type="hidden" name="to_email" value="contato@megasult.com.br" />' +
         '<div class="form-row">' +
         '<input type="text" name="name" placeholder="Seu nome" required />' +
         '<input type="text" name="company" placeholder="Empresa" />' +
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
         '<input type="tel" name="phone" placeholder="Telefone" required />' +
         '<textarea name="message" placeholder="Como podemos ajudar sua empresa?" required></textarea>' +
         '<button type="submit" class="btn-primary">Enviar mensagem</button>' +
-        "</form></div></div>"
+        "</form></div></div>",
     );
   }
 
@@ -44,10 +44,18 @@ document.addEventListener("DOMContentLoaded", function () {
   const contactModal = document.getElementById("contactModal");
   const contactCloseBtn = document.getElementById("contactModalCloseBtn");
 
-  function openModal() { modal.classList.add("open"); }
-  function closeModal() { modal.classList.remove("open"); }
-  function openContactModal() { contactModal.classList.add("open"); }
-  function closeContactModal() { contactModal.classList.remove("open"); }
+  function openModal() {
+    modal.classList.add("open");
+  }
+  function closeModal() {
+    modal.classList.remove("open");
+  }
+  function openContactModal() {
+    contactModal.classList.add("open");
+  }
+  function closeContactModal() {
+    contactModal.classList.remove("open");
+  }
 
   closeBtn.addEventListener("click", closeModal);
   modal.addEventListener("click", function (e) {
@@ -68,26 +76,31 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   document.addEventListener("keydown", function (e) {
-    if (e.key === "Escape") { closeModal(); closeContactModal(); }
+    if (e.key === "Escape") {
+      closeModal();
+      closeContactModal();
+    }
   });
 
-  form && form.addEventListener("submit", function (e) {
-    e.preventDefault();
-    const btn = form.querySelector('button[type="submit"]');
-    btn.disabled = true;
-    btn.textContent = "Enviando...";
-    emailjs.sendForm("service_8wa9d2d", "template_auvix", this)
-      .then(function () {
-        form.reset();
-        btn.disabled = false;
-        btn.textContent = "Enviar mensagem";
-        closeContactModal();
-        openModal();
-      })
-      .catch(function (err) {
-        alert("Erro ao enviar: " + JSON.stringify(err));
-        btn.disabled = false;
-        btn.textContent = "Enviar mensagem";
-      });
-  });
+  form &&
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const btn = form.querySelector('button[type="submit"]');
+      btn.disabled = true;
+      btn.textContent = "Enviando...";
+      emailjs
+        .sendForm("service_mega", "template_auvix", this)
+        .then(function () {
+          form.reset();
+          btn.disabled = false;
+          btn.textContent = "Enviar mensagem";
+          closeContactModal();
+          openModal();
+        })
+        .catch(function (err) {
+          alert("Erro ao enviar: " + JSON.stringify(err));
+          btn.disabled = false;
+          btn.textContent = "Enviar mensagem";
+        });
+    });
 });
